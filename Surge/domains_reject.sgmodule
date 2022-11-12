@@ -42,10 +42,6 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/tracking-p
 #https://github.com/geekdada/surge-list
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/dns-filter.txt, REJECT
 
-#1Host(Mini)
-#https://github.com/badmojr/1Hosts
-DOMAIN-SET,https://raw.githubusercontent.com/badmojr/1Hosts/master/mini/domains.txt, REJECT
-
 #1Host(Lite)
 #https://github.com/badmojr/1Hosts
 DOMAIN-SET,https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/domains.txt, REJECT
@@ -57,18 +53,3 @@ DOMAIN-SET,https://filter.futa.gg/domains.txt, REJECT
 #Energized IP Extension
 #https://github.com/EnergizedProtection/block
 DOMAIN-SET,https://block.energized.pro/extensions/ips/formats/list.txt, REJECT
-
-#!以下關閉
-
-#1Host(Xtra)
-#https://github.com/badmojr/1Hosts
-#DOMAIN-SET,https://raw.githubusercontent.com/badmojr/1Hosts/master/Xtra/domains.txt,REJECT
-
-#Energized Basic
-#https://github.com/EnergizedProtection/block
-#DOMAIN-SET,https://block.energized.pro/basic/formats/domains.txt,REJECT
-
-#Energized Xtreme Extension
-#https://github.com/EnergizedProtection/block
-#DOMAIN-SET,https://block.energized.pro/extensions/xtreme/formats/domains.txt,REJECT
-#s.youtube.com會block
