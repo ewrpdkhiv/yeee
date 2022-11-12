@@ -1,0 +1,13 @@
+#!name=刪除 LINE 錢包 圖片
+#!desc=2022/11/7
+
+[Rule]
+URL-REGEX, ^https:\/\/obs\.line-scdn\.net\/0h.*\/(a222|w384|a315|f396)$, REJECT
+
+URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/pointreward\/r\d{8}\/campaign_icon_url-.*\.(png|jpg)$, REJECT
+
+URL-REGEX, ^https:\/\/linepaytw-cms\.line-scdn\.net\/ads\/.*\.(jpg|png)$ ,REJECT
+
+
+[MITM]
+hostname = %APPEND% obs.line-scdn.net, vos.line-scdn.net ,linepaytw-cms.line-scdn.net
