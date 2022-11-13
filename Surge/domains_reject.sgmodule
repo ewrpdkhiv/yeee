@@ -46,7 +46,7 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/dns-filter
 #https://github.com/badmojr/1Hosts
 DOMAIN-SET,https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/domains.txt, REJECT
 
-#Futa domain
+#Futa
 #https://github.com/FutaGuard/LowTechFilter
 DOMAIN-SET,https://filter.futa.gg/domains.txt, REJECT
 
