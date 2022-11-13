@@ -1,55 +1,55 @@
-#!name=DOMAIN-SET
-#!desc=2022/11/12
+#!name=DOMAIN-SET REJECT
+#!desc=2022.11.13
 
 [Rule]
-#anti-AD
+#!anti-AD
 #https://github.com/privacy-protection-tools/anti-AD
 DOMAIN-SET,https://anti-ad.net/surge2.txt, REJECT
 
-#NobyDa/ND-AD
+#!NobyDa/ND-AD
 #https://github.com/NobyDa/ND-AD
 DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block.txt, REJECT
 
-#adaway
+#!adaway
 #https://github.com/geekdada/surge-list
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/adaway.txt, REJECT
 
-#annoyances-filter
+#!annoyances-filter
 #https://github.com/geekdada/surge-list
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/annoyances-filter.txt, REJECT
 
-#base-filter
+#!base-filter
 #https://github.com/geekdada/surge-list
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/base-filter.txt, REJECT
 
-#chinese-filter
+#!chinese-filter
 #https://github.com/geekdada/surge-list
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/chinese-filter.txt, REJECT
 
-#neohosts-full
+#!neohosts-full
 #https://github.com/geekdada/surge-list
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/neohosts-full.txt, REJECT
 
-#social-media-filter
+#!social-media-filter
 #https://github.com/geekdada/surge-list
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/social-media-filter.txt, REJECT
 
-#tracking-protection-filter
+#!tracking-protection-filter
 #https://github.com/geekdada/surge-list
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/tracking-protection-filter.txt, REJECT
 
-#dns-filter
+#!dns-filter
 #https://github.com/geekdada/surge-list
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/dns-filter.txt, REJECT
 
-#1Host(Lite)
+#!1Host(Lite)
 #https://github.com/badmojr/1Hosts
 DOMAIN-SET,https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/domains.txt, REJECT
 
-#Futa
+#!Futa
 #https://github.com/FutaGuard/LowTechFilter
 DOMAIN-SET,https://filter.futa.gg/domains.txt, REJECT
 
-#Energized IP Extension
+#!Energized IP Extension
 #https://github.com/EnergizedProtection/block
 DOMAIN-SET,https://block.energized.pro/extensions/ips/formats/list.txt, REJECT

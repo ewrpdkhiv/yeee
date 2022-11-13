@@ -1,5 +1,5 @@
-#!name=刪除 LINE 錢包 圖片
-#!desc=2022/11/7
+#!name=remove line_wallet_pic
+#!desc=2022.11.13
 
 [Rule]
 URL-REGEX, ^https:\/\/obs\.line-scdn\.net\/0h.*\/(a222|w384|a315|f396)$, REJECT
