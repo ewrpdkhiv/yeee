@@ -53,3 +53,7 @@ DOMAIN-SET,https://filter.futa.gg/domains.txt, REJECT
 #!Energized IP Extension
 #https://github.com/EnergizedProtection/block
 DOMAIN-SET,https://block.energized.pro/extensions/ips/formats/list.txt, REJECT
+
+#!OISD basic
+#https://oisd.nl/downloads
+DOMAIN-SET,https://dbl.oisd.nl/basic/, REJECT
