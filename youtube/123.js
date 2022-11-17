@@ -12,3 +12,8 @@ function mapItems(itemList, isBanner = false) {
 function removeBanner(itemObject) {
   if (itemObject?.g3F1) itemObject.g3F1 = itemObject.g3F1?.filter((o) => isNotUpload(o));
 }
+function isNotUpload(o) {
+  let isUpload = o?.g4F318370163;
+  if (isUpload) needProcessFlag = true;
+  return !isUpload;
+}
