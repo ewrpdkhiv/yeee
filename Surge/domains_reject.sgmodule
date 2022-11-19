@@ -1,7 +1,15 @@
 #!name=DOMAIN-SET REJECT
-#!desc=2022.11.13
+#!desc=v20221119
 
 [Rule]
+#!Futa
+#https://github.com/FutaGuard/LowTechFilter
+DOMAIN-SET,https://filter.futa.gg/domains.txt, REJECT
+
+#!OISD basic
+#https://oisd.nl/downloads
+DOMAIN-SET,https://dbl.oisd.nl/basic/, REJECT
+
 #!anti-AD
 #https://github.com/privacy-protection-tools/anti-AD
 DOMAIN-SET,https://anti-ad.net/surge2.txt, REJECT
@@ -9,10 +17,6 @@ DOMAIN-SET,https://anti-ad.net/surge2.txt, REJECT
 #!NobyDa/ND-AD
 #https://github.com/NobyDa/ND-AD
 DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block.txt, REJECT
-
-#!adaway
-#https://github.com/geekdada/surge-list
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/adaway.txt, REJECT
 
 #!annoyances-filter
 #https://github.com/geekdada/surge-list
@@ -26,9 +30,9 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/base-filte
 #https://github.com/geekdada/surge-list
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/chinese-filter.txt, REJECT
 
-#!neohosts-full
+#!dns-filter
 #https://github.com/geekdada/surge-list
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/neohosts-full.txt, REJECT
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/dns-filter.txt, REJECT
 
 #!social-media-filter
 #https://github.com/geekdada/surge-list
@@ -38,22 +42,16 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/social-med
 #https://github.com/geekdada/surge-list
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/tracking-protection-filter.txt, REJECT
 
-#!dns-filter
+#!adaway
 #https://github.com/geekdada/surge-list
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/dns-filter.txt, REJECT
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/adaway.txt, REJECT
 
 #!1Host(Lite)
 #https://github.com/badmojr/1Hosts
 DOMAIN-SET,https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/domains.txt, REJECT
 
-#!Futa
-#https://github.com/FutaGuard/LowTechFilter
-DOMAIN-SET,https://filter.futa.gg/domains.txt, REJECT
-
 #!Energized IP Extension
 #https://github.com/EnergizedProtection/block
 DOMAIN-SET,https://block.energized.pro/extensions/ips/formats/list.txt, REJECT
 
-#!OISD basic
-#https://oisd.nl/downloads
-DOMAIN-SET,https://dbl.oisd.nl/basic/, REJECT
+
