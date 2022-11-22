@@ -1,0 +1,28 @@
+#!name=移除Line主頁推薦貼圖...
+#!desc=v20221122
+
+[Rule]
+
+#錢包 - LINE POINTS 集點任務
+URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/pointreward\/r\d{8}\/campaign_icon_url-.*\.(png|jpg)$, REJECT
+
+#錢包 - LINE Pay 雙11優惠完整攻略 & LINE Pay 期間限定主打
+URL-REGEX, ^https:\/\/linepaytw-cms\.line-scdn\.net\/ads\/.*\.(jpg|png)$ ,REJECT
+
+#錢包 - 除了以上2條規則以外，錢包內的其餘圖片
+URL-REGEX, ^https:\/\/obs\.line-scdn\.net\/0h.*\/(a222|w384|a315|f396)$, REJECT
+
+#主頁 - 推薦貼圖
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/EXT\/home\/sapi\/v4p\/flex$,REJECT
+
+#VOOM - 推薦
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/discover\/api\/v1\/recommendTab\/feeds$,REJECT
+
+#VOOM - 追蹤中
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v57\/timeline\/tab\/contents\.json$,REJECT
+
+#VOOM - 不明
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v57\/timeline\/tab\/status\.json\?includeRebootStatus=(0|1)$,REJECT
+
+[MITM]
+hostname = %APPEND% obs.line-scdn.net, vos.line-scdn.net ,linepaytw-cms.line-scdn.net ,gw.line.naver.jp
