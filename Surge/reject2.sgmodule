@@ -18,10 +18,10 @@ URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/EXT\/home\/sapi\/v4p\/flex$,REJECT
 URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/discover\/api\/v\d\/recommendTab\/feeds$,REJECT
 
 #!LINE > VOOM > 追蹤中
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v\d{1,}\/timeline\/tab\/contents\.json$,REJECT
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v\d{2}\/timeline\/tab\/contents\.json$,REJECT
 
 #!LINE > VOOM > 不明
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v\d{1,}\/timeline\/tab\/status\.json\?includeRebootStatus=(0|1)$,REJECT
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v\d{2}\/timeline\/tab\/status\.json\?includeRebootStatus=(0|1)$,REJECT
 
 #!LINE > Story
 URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/st\/api\/v\d\/story\/newstory$, REJECT
@@ -29,7 +29,7 @@ URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/st\/api\/v\d\/story\/recentstory\/list
 URL-REGEX,^https:\/\/vos\.line-scdn\.net\/timeline-service\/TL_renewal_intro_.*\.mp4$, REJECT
 
 #!元大 > 開啟時廣告
-URL-REGEX,^https:\/\/ys\.yuanta\.com\.tw\/nexus_notice\/noticeshow_app\.aspx?\d{6}$,REJECT
+URL-REGEX,^https:\/\/ys\.yuanta\.com\.tw\/nexus_notice\/noticeshow_app\.aspx\?\d{6}$,REJECT
 
 #!Line Webtoon > 首頁大廣告
 URL-REGEX,^https:\/\/lan3rd\.line\.me\/v\d\/LINE_WEBTOON\/ios\/document\/notice\?nextSeq=&timestamp=, REJECT
