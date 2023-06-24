@@ -1,5 +1,5 @@
 #!name=reject1
-#!desc=v20230126
+#!desc=v20230622
 
 [Rule]
 #!blackmatrix7 > 去廣告測試版（搭配mitm）
