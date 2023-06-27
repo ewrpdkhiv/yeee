@@ -1,5 +1,5 @@
 #!name=reject1
-#!desc=v20230622
+#!desc=v20230627
 
 [Rule]
 #!blackmatrix7 > 去廣告測試版（搭配mitm）
@@ -15,9 +15,9 @@ RULE-SET, https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/
 #https://github.com/FutaGuard/LowTechFilter
 DOMAIN-SET,https://filter.futa.gg/domains.txt, REJECT
 
-#!Hagezi > Multi PRO
+#!Hagezi > Multi Light
 #https://github.com/hagezi/dns-blocklists
-DOMAIN-SET,https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/pro.txt, REJECT
+DOMAIN-SET,https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/light.txt, REJECT
 
 #!Futa > regex 規則 簡訊詐騙
 URL-REGEX, wsf.+gov\.xyz,REJECT
