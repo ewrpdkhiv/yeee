@@ -37,5 +37,33 @@ URL-REGEX,^https:\/\/lan3rd\.line\.me\/v\d\/LINE_WEBTOON\/ios\/document\/notice\
 #!快看
 URL-REGEX,^https:\/\/api\.kkmh\.com\/v\d\/ad\/, REJECT
 
+#!漫畫人
+URL-REGEX, ^https:\/\/mangaapi\.manhuaren\.(net|com)\/.*\/user\/.*Location, REJECT
+
+#!起點
+URL-REGEX,^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/bookshelf\/getHoverAdv$,REJECT
+
+#!起點
+URL-REGEX,^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/adv\/getadvlist,REJECT
+
+#!起點
+URL-REGEX,^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/message\/ack\?messageIds=\d{18}$,REJECT
+
+#!知乎
+URL-REGEX,^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/,REJECT
+
+#!健行筆記-全頁廣告
+URL-REGEX,^https:\/\/hiking\.biji\.co\/api\/getBannerInfo$,REJECT
+
+#!富邦LINE廣告
+URL-REGEX, ^https:\/\/obs\.line-scdn\.net\/h.*\/700$,REJECT
+
+#!dcard廣告影片
+URL-REGEX,^https:\/\/megapx-assets\.dcard\.tw\/.*\?dcard_ad=,REJECT
+
+#!Line錢包中間訊息
+URL-REGEX,^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/WalletTab_Middle,REJECT
+
+
 [MITM]
 hostname = %APPEND% obs.line-scdn.net, vos.line-scdn.net ,linepaytw-cms.line-scdn.net ,gw.line.naver.jp,ys.yuanta.com.tw,lan3rd.line.me,api.kkmh.com
