@@ -1,11 +1,7 @@
 #!name=reject1
-#!desc=v20230710
+#!desc=v20230718
 
 [Rule]
-#!blackmatrix7 > 去廣告測試版（搭配mitm）
-#https://github.com/blackmatrix7/ios_rule_script
-RULE-SET, https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AdvertisingTest/AdvertisingTest.list, REJECT
-
 #!blackmatrix7 > 知乎廣告攔截（搭配mitm）
 RULE-SET, https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ZhihuAds/ZhihuAds.list,REJECT
 
