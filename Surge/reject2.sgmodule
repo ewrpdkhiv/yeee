@@ -3,7 +3,7 @@
 
 [Rule]
 #!LINE > 錢包 > LINE POINTS 集點任務
-URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/pointreward\/r\d{8}\/campaign_icon_url-.*\.(png|jpg)$, REJECT
+URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/pointreward\/r\d{8}\/campaign_icon_url-.*\.(png|jpg|jpeg)$, REJECT
 
 #!LINE > 錢包 > LINE Pay 雙11優惠完整攻略 & LINE Pay 期間限定主打
 URL-REGEX, ^https:\/\/linepaytw-cms\.line-scdn\.net\/ads\/.*\.(jpg|png)$ ,REJECT
