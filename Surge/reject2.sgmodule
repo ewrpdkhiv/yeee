@@ -1,5 +1,5 @@
 #!name=reject2
-#!desc=v20230718
+#!desc=v20230719
 
 [Rule]
 #!LINE > 錢包 > LINE POINTS 集點任務
@@ -64,6 +64,15 @@ URL-REGEX,^https:\/\/megapx-assets\.dcard\.tw\/.*\?dcard_ad=,REJECT
 #!Line錢包中間訊息
 URL-REGEX,^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/WalletTab_Middle,REJECT
 
+#污汙漫畫
+URL-REGEX, ^https:\/\/www\.comicbox\.xyz\/.*\.gif$, REJECT
+
+#18comic
+URL-REGEX, ^https:\/\/18comic\.vip\/.*\.gif ,REJECT
+
+#愛薇兒
+URL-REGEX, ^https:\/\/www\.avcome\.com\/.*\.gif$, REJECT
+URL-REGEX, ^https:\/\/www\.avcome\.com\/pic\/.*\.jpg$, REJECT
 
 [MITM]
-hostname = %APPEND% vos.line-scdn.net,linepaytw-cms.line-scdn.net,obs.line-scdn.net, gw.line.naver.jp,ys.yuanta.com.tw,lan3rd.line.me,api.kkmh.com,mangaapi.manhuaren.net, mangaapi.manhuaren.com,magev6.if.qidian.com,api.zhihu.com,hiking.biji.co,megapx-assets.dcard.tw
+hostname = %APPEND% vos.line-scdn.net,linepaytw-cms.line-scdn.net,obs.line-scdn.net, gw.line.naver.jp,ys.yuanta.com.tw,lan3rd.line.me,api.kkmh.com,mangaapi.manhuaren.net, mangaapi.manhuaren.com,magev6.if.qidian.com,api.zhihu.com,hiking.biji.co,megapx-assets.dcard.tw, www.comicbox.xyz ,18comic.vip, www.avcome.com
