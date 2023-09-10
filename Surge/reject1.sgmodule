@@ -5,10 +5,6 @@
 #!blackmatrix7 > 知乎廣告攔截（搭配mitm）
 RULE-SET, https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ZhihuAds/ZhihuAds.list,REJECT
 
-#!Futa
-#https://github.com/FutaGuard/LowTechFilter
-DOMAIN-SET,https://filter.futa.gg/hosts-domains.txt, REJECT
-
 #!Futa-由台灣 165 反詐騙提供
 #https://github.com/FutaGuard/LowTechFilter
 DOMAIN-SET,https://filter.futa.gg/TW165-domains.txt, REJECT
