@@ -34,8 +34,6 @@ cn.pornhub.com##.js-noRedirect
 cn.pornhub.com###flagVideoBtn
 cn.pornhub.com###playlistModal
 
-
-
 ! 18H漫畫
 18h.mm-cg.com##.ut1_img_ex_content
 18h.mm-cg.com##.footer_main
