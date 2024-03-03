@@ -1,20 +1,19 @@
 #!name=reject1
-#!desc=v20230718
+#!desc=v2024-03-03
 
 [Rule]
-#!blackmatrix7 > 知乎廣告攔截（搭配mitm）
-RULE-SET, https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ZhihuAds/ZhihuAds.list,REJECT
+# blackmatrix7 > 知乎廣告攔截（搭配mitm）
+RULE-SET, https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ZhihuAds/ZhihuAds.list, REJECT
 
-#!Futa-由台灣 165 反詐騙提供
+# TW165 台灣反詐騙
 #https://github.com/FutaGuard/LowTechFilter
-DOMAIN-SET,https://filter.futa.gg/TW165-domains.txt, REJECT
+DOMAIN-SET, https://filter.futa.gg/TW165_domains.txt, REJECT
+# LowTechHost
+DOMAIN-SET, https://filter.futa.gg/hosts_domains.txt, REJECT
 
-#!Futa > regex 規則 簡訊詐騙
-URL-REGEX, wsf.+gov\.xyz,REJECT
-URL-REGEX, tw.{3}gov\.com,REJECT
-URL-REGEX, tw\S{2}gov\.com,REJECT
-URL-REGEX, [a-z]{3}gov\.(com|tv|me|top),REJECT
-URL-REGEX, butie\S+\.(shop|xyz),REJECT
-
-
-
+# Futa > regex 規則 簡訊詐騙
+URL-REGEX, wsf.+gov\.xyz, REJECT
+URL-REGEX, tw.{3}gov\.com, REJECT
+URL-REGEX, tw\S{2}gov\.com, REJECT
+URL-REGEX, [a-z]{3}gov\.(com|tv|me|top), REJECT
+URL-REGEX, butie\S+\.(shop|xyz), REJECT
