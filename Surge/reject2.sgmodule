@@ -1,78 +1,134 @@
 #!name=reject2
-#!desc=v20230719
+#!desc=v2024-03-03
+
 
 [Rule]
-#!LINE > 錢包 > LINE POINTS 集點任務
-URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/pointreward\/r\d{8}\/campaign_icon_url-.*\.(png|jpg|jpeg)$, REJECT
 
-#!LINE > 錢包 > LINE Pay 雙11優惠完整攻略 & LINE Pay 期間限定主打
-URL-REGEX, ^https:\/\/linepaytw-cms\.line-scdn\.net\/ads\/.*\.(jpg|png)$ ,REJECT
-
-#!LINE > 錢包 > 除了以上2條規則以外，錢包內的其餘圖片
+# Line > 錢包
+# LINE > 錢包 > LINE Pay 雙11優惠完整攻略 & LINE Pay 期間限定主打
+URL-REGEX, ^https:\/\/linepaytw-cms\.line-scdn\.net\/ads\/.*, REJECT
+# LINE > 錢包 > 除了以上2條規則以外，錢包內的其餘圖片
 URL-REGEX, ^https:\/\/obs\.line-scdn\.net\/0h.*\/(a222|w384|a315|f396)$, REJECT
+# LINE > 錢包> 生活優惠 > 酒吧
+URL-REGEX, ^https:\/\/obs\.line-scdn\.net\/0h.*\/w644$, REJECT
+# LINE > 錢包 > 購物 > 台灣虎航
+URL-REGEX, ^https:\/\/obs\.line-scdn\.net\/r\/travel\/content\/, REJECT
+# LINE > 錢包 > 購物 > 購物推薦
+URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/landpress-content-v2-.*, REJECT
+#LINE > 錢包 > LINE POINTS 集點任務
+URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/pointreward\/r\d{8}\/campaign_icon_url-.*\., REJECT
+# LINE > 錢包 > LINE POINTS 集點任務
+URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/pointreward\/r\d{8}\/campaign_icon_url-.*\.(png|jpg|jpeg)$, REJECT
+# LINE > 錢包 > LINE BANK > 廣告
+URL-REGEX, ^https:\/\/line-img\.linebank\.com\.tw\/cms\/line_wallet\/wallet_ad\/, REJECT
+# LINE > 錢包 > LINE BANK > 廣告
+URL-REGEX, ^https:\/\/line-img\.linebank\.com\.tw\/cms\/line_wallet\/wallet_ad_, REJECT
 
-#!LINE > 主頁 > 推薦貼圖
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/EXT\/home\/sapi\/v4p\/flex$,REJECT
 
-#!LINE > VOOM > 推薦
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/discover\/api\/v\d\/recommendTab\/feeds$,REJECT
+# Line > VOOM
+# LINE > VOOM > 推薦
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/discover\/api\/v\d\/recommendTab\/feeds$, REJECT
+# LINE > VOOM > 追蹤中
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v\d{2}\/timeline\/tab\/contents\.json$, REJECT
 
-#!LINE > VOOM > 追蹤中
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v\d{2}\/timeline\/tab\/contents\.json$,REJECT
-
+# Line > 其他
+# LINE > 主頁 > 推薦貼圖
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/EXT\/home\/sapi\/v4p\/flex$, REJECT
 #!LINE > VOOM > 不明
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v\d{2}\/timeline\/tab\/status\.json\?includeRebootStatus=(0|1)$,REJECT
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v\d{2}\/timeline\/tab\/status\.json\?includeRebootStatus=(0|1)$, REJECT
+# LINE > Story
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/st\/api\/v\d\/story\/newstory$, REJECT
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/st\/api\/v\d\/story\/recentstory\/list$, REJECT
+URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/timeline-service\/TL_renewal_intro_.*\.mp4$, REJECT
+# LINE > 移除搜尋裡面亂七八糟的結果
+DOMAIN, search.line.me, REJECT
+# LINE > 從下而上的廣告，似乎是先載入圖片，後面在彈出，彈出找不到規則
+URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/wallet\/targeted-popup\/, REJECT
+# LINE > 小橫條
+URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/, REJECT
+# LINE > 主頁 > 底下 > 推薦貼圖
+URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/EXT\/home\/recommendation\/flex$, REJECT
+# Line錢包中間訊息
+URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/WalletTab_Middle, REJECT
+# 富邦LINE廣告
+URL-REGEX, ^https:\/\/obs\.line-scdn\.net\/h.*\/700$, REJECT
 
-#!LINE > Story
-URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/st\/api\/v\d\/story\/newstory$, REJECT
-URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/st\/api\/v\d\/story\/recentstory\/list$, REJECT
-URL-REGEX,^https:\/\/vos\.line-scdn\.net\/timeline-service\/TL_renewal_intro_.*\.mp4$, REJECT
+# Line Webtoon > 首頁大廣告
+URL-REGEX, ^https:\/\/lan3rd\.line\.me\/v\d\/LINE_WEBTOON\/ios\/document\/notice\?nextSeq=&timestamp=, REJECT
 
-#!元大 > 開啟時廣告
-URL-REGEX,^https:\/\/ys\.yuanta\.com\.tw\/nexus_notice\/noticeshow_app\.aspx\?\d{6}$,REJECT
-
-#!Line Webtoon > 首頁大廣告
-URL-REGEX,^https:\/\/lan3rd\.line\.me\/v\d\/LINE_WEBTOON\/ios\/document\/notice\?nextSeq=&timestamp=, REJECT
-
-#!快看
-URL-REGEX,^https:\/\/api\.kkmh\.com\/v\d\/ad\/, REJECT
-
-#!漫畫人
-URL-REGEX, ^https:\/\/mangaapi\.manhuaren\.(net|com)\/.*\/user\/.*Location, REJECT
-
-#!起點
-URL-REGEX,^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/bookshelf\/getHoverAdv$,REJECT
-
-#!起點
-URL-REGEX,^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/adv\/getadvlist,REJECT
-
-#!起點
-URL-REGEX,^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/message\/ack\?messageIds=\d{18}$,REJECT
-
-#!知乎
-URL-REGEX,^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/,REJECT
-
-#!健行筆記-全頁廣告
-URL-REGEX,^https:\/\/hiking\.biji\.co\/api\/getBannerInfo$,REJECT
-
-#!富邦LINE廣告
-URL-REGEX, ^https:\/\/obs\.line-scdn\.net\/h.*\/700$,REJECT
-
-#!dcard廣告影片
-URL-REGEX,^https:\/\/megapx-assets\.dcard\.tw\/.*\?dcard_ad=,REJECT
-
-#!Line錢包中間訊息
-URL-REGEX,^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/WalletTab_Middle,REJECT
-
-#污汙漫畫
+# 污汙漫畫
 URL-REGEX, ^https:\/\/www\.comicbox\.xyz\/.*\.gif$, REJECT
 
-#18comic
-URL-REGEX, ^https:\/\/18comic\.vip\/.*\.gif ,REJECT
+# 18comic
+URL-REGEX, ^https:\/\/18comic\.vip\/.*\.gif, REJECT
 
-#愛薇兒
+# 愛薇兒
 URL-REGEX, ^https:\/\/www\.avcome\.com\/.*\.gif$, REJECT
 URL-REGEX, ^https:\/\/www\.avcome\.com\/pic\/.*\.jpg$, REJECT
 
+# 元大 > 開啟時廣告
+URL-REGEX, ^https:\/\/ys\.yuanta\.com\.tw\/nexus_notice\/noticeshow_app\.aspx\?\d{6}$, REJECT
+
+# 快看
+URL-REGEX, ^https:\/\/api\.kkmh\.com\/v\d\/ad\/, REJECT
+
+# 漫畫人
+URL-REGEX, ^https:\/\/mangaapi\.manhuaren\.(net|com)\/.*\/user\/.*Location, REJECT
+
+# 漫畫人 > 福利中心
+URL-REGEX, ^https:\/\/mangaapi\.manhuaren\.com\/v\d\/public\/getWelfareCenter\?, REJECT
+
+# 起點
+URL-REGEX, ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/bookshelf\/getHoverAdv$, REJECT
+URL-REGEX, ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/adv\/getadvlist, REJECT
+URL-REGEX, ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/message\/ack\?messageIds=\d{18}$, REJECT
+
+# 知乎
+URL-REGEX, ^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/, REJECT
+
+# 健行筆記 > 全頁廣告
+URL-REGEX, ^https:\/\/hiking\.biji\.co\/api\/getBannerInfo$, REJECT
+
+#HikingBook > 探索 > 上方廣告
+URL-REGEX, ^https:\/\/hikingbook\.net\/advertises, REJECT
+
+# Dcard > 廣告影片
+URL-REGEX, ^https:\/\/megapx-assets\.dcard\.tw\/.*\?dcard_ad=, REJECT
+
+# 8591 > 啟動廣告
+URL-REGEX, ^https:\/\/res\.8591\.com\.tw\/V4\/Index\/bootPage\?v=ios&v_app=ios$, REJECT
+
+# 三竹股市 > 上方橫條廣告
+URL-REGEX, ^https:\/\/adapi\.mitake\.com\.tw\/v1\/getADFileList\?\d+$, REJECT
+
+# 街口廣告
+URL-REGEX, ^https:\/\/img\.jkos\.com\.tw\/ad\/image\/.*\.(png|jpg|jpeg)$, REJECT
+DOMAIN, ad-img.jkos.com.tw, REJECT
+
+#HamiPay > 首頁廣告
+URL-REGEX, ^https:\/\/hamipoint\.cht\.com\.tw\/api\/cht\/getHomeBanners, REJECT
+
+
 [MITM]
-hostname = %APPEND% vos.line-scdn.net,linepaytw-cms.line-scdn.net,obs.line-scdn.net, gw.line.naver.jp,ys.yuanta.com.tw,lan3rd.line.me,api.kkmh.com,mangaapi.manhuaren.net, mangaapi.manhuaren.com,magev6.if.qidian.com,api.zhihu.com,hiking.biji.co,megapx-assets.dcard.tw, www.comicbox.xyz ,18comic.vip, www.avcome.com
+hostname = %APPEND% 
+linepaytw-cms.line-scdn.net, 
+obs.line-scdn.net, 
+vos.line-scdn.net, 
+line-img.linebank.com.tw, 
+gw.line.naver.jp, 
+lan3rd.line.me, 
+www.comicbox.xyz, 
+18comic.vip, 
+www.avcome.com, 
+ys.yuanta.com.tw, 
+api.kkmh.com, 
+mangaapi.manhuaren.net, 
+mangaapi.manhuaren.com, 
+magev6.if.qidian.com, 
+api.zhihu.com, 
+hiking.biji.co, 
+megapx-assets.dcard.tw, 
+res.8591.com.tw, 
+adapi.mitake.com.tw, 
+img.jkos.com.tw, 
+hamipoint.cht.com.tw
