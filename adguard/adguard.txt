@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2024-03-03
+! Version: 2024-03-04
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -22,15 +22,15 @@ bg3.co##.social_share_frame
 sto520.com##.div_ads_label
 
 ! xvideos
-xvideos.com###v-actions > div.tabs > button.save
-xvideos.com###v-actions > div.tabs > button.dl.tab-button
 xvideos.com##.icf-pencil
 xvideos.com##.thread-node-metadata
 xvideos.com##.thread-node-btn-post
-xvideos.com###v-actions-overflow-menu
 xvideos.com##.botLinks
+xvideos.com###v-actions-overflow-menu
 xvideos.com###header-mobile-right
 xvideos.com###mobile-header-links
+xvideos.com###v-actions > div.tabs > button.save
+xvideos.com###v-actions > div.tabs > button.dl.tab-button
 
 ! pronhub 
 cn.pornhub.com##.js_videoSubscribeButton
@@ -49,7 +49,6 @@ cn.pornhub.com###playlistModal
 18h.mm-cg.com##.div_adhost
 
 ! 汙汙漫畫
-www.comicbox.xyz##section.mod-recommend3 > h2
 www.comicbox.xyz##.list_recommend3
 www.comicbox.xyz##.active
 www.comicbox.xyz##.iframe-block-mobileChapterTop
@@ -57,6 +56,10 @@ www.comicbox.xyz##.detail-comment-fix-bottom
 www.comicbox.xyz##.global-navbar
 www.comicbox.xyz##.CarouselView center
 www.comicbox.xyz##.under-top-bar
+www.comicbox.xyz##.inner
+www.comicbox.xyz##.innerBottom
+www.comicbox.xyz##section.mod-recommend3 > h2
+www.comicbox.xyz###img_banner_77_2
 www.comicbox.xyz###btn_toolFav
 www.comicbox.xyz###comment
 
