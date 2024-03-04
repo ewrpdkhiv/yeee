@@ -63,6 +63,16 @@ www.comicbox.xyz###img_banner_77_2
 www.comicbox.xyz###btn_toolFav
 www.comicbox.xyz###comment
 
+! 18comic
+18comic.vip##.a35c7-1_4_sticky2
+18comic.vip##.top-nav
+18comic.vip##a.meun-video
+18comic.vip###sns
+18comic.vip##a.meun-game
+18comic.vip##.btn.btn-primary
+18comic.vip##.fas.fa-store-alt
+18comic.vip##.fas.fa-user-circle
+
 ! OMG側邊
 game.omg.com.tw##.function-box-pc.fub-open
 
