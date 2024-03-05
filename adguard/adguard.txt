@@ -81,8 +81,14 @@ avcome.com##center > table:nth-child(2) > tbody
 avcome.com##center > table:first-child > tbody > tr:nth-child(2) > td
 avcome.com##center > table:first-child > tbody > tr:first-child > td > table > tbody
 
-! OMG側邊
+! TOS
+@@game.omg.com.tw##.width-1
+@@game.omg.com.tw##.btn.btn-5.size-full.LoginBtn
 game.omg.com.tw##.function-box-pc.fub-open
+game.omg.com.tw##.col-link.text-c
+game.omg.com.tw##.font-s.line-h-2.text-c
+game.omg.com.tw##.icon_f
+game.omg.com.tw##.blank
 
 ! 其他
 abmedia.io###pum-47873
