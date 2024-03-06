@@ -74,7 +74,10 @@ www.comicbox.xyz###comment
 18comic.vip##.fas.fa-user-circle
 
 ! 愛薇兒
-
+avcome.com###iframepage
+avcome.com##table[bgcolor="#800000"]
+avcome.com##td[valign="top"][colspan="5"]
+avcome.com##img[border="0"][height="230"][width="800"]
 
 ! TOS
 @@game.omg.com.tw##.width-1
