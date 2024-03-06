@@ -74,12 +74,7 @@ www.comicbox.xyz###comment
 18comic.vip##.fas.fa-user-circle
 
 ! 愛薇兒
-avcome.com###iframepage
-avcome.com###table4 > tbody > tr > td
-avcome.com###table3 > tbody > tr > td > center > a:nth-child(6) > img:first-child
-avcome.com##center > table:nth-child(2) > tbody
-avcome.com##center > table:first-child > tbody > tr:nth-child(2) > td
-avcome.com##center > table:first-child > tbody > tr:first-child > td > table > tbody
+
 
 ! TOS
 @@game.omg.com.tw##.width-1
