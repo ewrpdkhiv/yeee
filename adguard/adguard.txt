@@ -11,6 +11,13 @@
 69shu.pro##.foot
 69shu.pro##.yuedutuijian
 69shu.pro##.baocuo
+69shu.pro##.tools.active
+69shu.pro##li.col-4 > div.mybox
+
+! 69story 
+69story.com###banner25
+69story.com###banner55
+69story.com###bkat
 
 ! 天天看小說
 bg3.co##.footer_frame
@@ -39,6 +46,8 @@ cn.pornhub.com##.js-mainFooter
 cn.pornhub.com##.js-noRedirect
 cn.pornhub.com###flagVideoBtn
 cn.pornhub.com###playlistModal
+cn.pornhub.com###js-likedVideosTooltip
+cn.pornhub.com##i.ph-icon-flag
 
 ! 18H漫畫
 18h.mm-cg.com##.ut1_img_ex_content
@@ -47,6 +56,7 @@ cn.pornhub.com###playlistModal
 18h.mm-cg.com##.animenu__nav
 18h.mm-cg.com##.di_img
 18h.mm-cg.com##.div_adhost
+18h.mm-cg.com##img[border="0"][width="1000px"]
 
 ! 汙汙漫畫
 www.comicbox.xyz##.list_recommend3
@@ -73,11 +83,17 @@ www.comicbox.xyz###comment
 18comic.vip##.fas.fa-store-alt
 18comic.vip##.fas.fa-user-circle
 
+
 ! 愛薇兒
 avcome.com###iframepage
 avcome.com##table[bgcolor="#800000"]
 avcome.com##td[valign="top"][colspan="5"]
 avcome.com##img[border="0"][height="230"][width="800"]
+
+! hanime1
+hanime1.me###mobile-ad
+hanime1.me###watch-footer
+hanime1.me###user-modal-trigger
 
 ! TOS
 @@game.omg.com.tw##.width-1
@@ -88,7 +104,37 @@ game.omg.com.tw##.font-s.line-h-2.text-c
 game.omg.com.tw##.icon_f
 game.omg.com.tw##.blank
 
+! BC&Lowy
+forgetfulbc.blogspot.com##a[target="_blank"]:remove()
+forgetfulbc.blogspot.com##div[style="text-align: center;"]
+forgetfulbc.blogspot.com##.embed-container
+forgetfulbc.blogspot.com##div.separator
+forgetfulbc.blogspot.com##div.embed-container
+forgetfulbc.blogspot.com##span[style="color: #660000;"]
+
+! Yahoo新聞
+tw.news.yahoo.com##.article-challenge-container
+tw.news.yahoo.com###popover-wrapper
+tw.news.yahoo.com##button.follow-button.non-loggedin
+tw.news.yahoo.com##div.gam-placeholder.sdaLite_D(n)
+
+! 台灣小說網
+m.xsw.tw##.back
+
+! Dcard
+dcard.tw##.atm_cs_12oz46p.atm_c8_eai3rd.atm_g3_xy5hu5.atm_7l_1o85cey.atm_l8_qnkx.m1ch8o4s
+dcard.tw##.atm_26_b78cep.atm_mk_h2mmj6.atm_9s_1txwivl.atm_fc_1h6ojuz.atm_l8_p2tquy.a11dsnn
+
+! 鏈新聞
+abmedia.io##span
+abmedia.io##.wp-block-groupinner-container
+
+! 爆料公社
+web.bc3ts.net##div.card.PostCommentCard_commentAddWrapperIKgXd
+web.bc3ts.net##div.OpenApp_rootGNltP.OpenApp_rootWithFooterComment6i0hB
+
 ! 其他
+18av.mm-cg.com##.ut1_img_ex_content
 abmedia.io###pum-47873
 businesstoday.com.tw###showNext
 eats.quickclick.cc##.notify_fixed.ad_bottom0
