@@ -5,14 +5,14 @@
 
 
 ! 69書吧
-69shu.pro##.tuijian
-69shu.pro##.yueduad1
-69shu.pro##.ranking
-69shu.pro##.foot
-69shu.pro##.yuedutuijian
-69shu.pro##.baocuo
-69shu.pro##.tools.active
-69shu.pro##li.col-4 > div.mybox
+69shu.*##.tuijian
+69shu.*##.yueduad1
+69shu.*##.ranking
+69shu.*##.foot
+69shu.*##.yuedutuijian
+69shu.*##.baocuo
+69shu.*##.tools.active
+69shu.*##li.col-4 > div.mybox
 
 ! 69story 
 69story.com###banner25
@@ -117,6 +117,7 @@ tw.news.yahoo.com##.article-challenge-container
 tw.news.yahoo.com###popover-wrapper
 tw.news.yahoo.com##button.follow-button.non-loggedin
 tw.news.yahoo.com##div.gam-placeholder.sdaLite_D(n)
+tw.news.yahoo.com###postArticle
 
 ! 台灣小說網
 m.xsw.tw##.back
@@ -141,6 +142,11 @@ eats.quickclick.cc##.notify_fixed.ad_bottom0
 hamipoint.cht.com.tw##.advbox
 histock.tw###fullsiteAD
 m.mobile01.com###fancybox-container-1
+m.happymh.com##article.jss29
+m.happymh.com##div.jss7
+
+managertoday.com.tw##img.w-12.sm
+money.udn.com##div.appbanner
 sspai.com###btn-call-app
 storm.mg###stock_bar_inner
 setn.com##div.wrapper > div.video-container
@@ -149,3 +155,6 @@ view.inews.qq.com##.normal_padding__gVUr8
 wealth.businessweekly.com.tw###_popIn_recommend
 zhihu.com##.ContentItem-actions.Sticky.RichContent-actions.is-fixed.is-bottom
 zh.moegirl.org.cn###moe-open-in-app
+
+
+
