@@ -5,14 +5,14 @@
 
 
 ! 69書吧
-69shu.*##.tuijian
-69shu.*##.yueduad1
-69shu.*##.ranking
-69shu.*##.foot
-69shu.*##.yuedutuijian
-69shu.*##.baocuo
-69shu.*##.tools.active
-69shu.*##li.col-4 > div.mybox
+69shu*##.tuijian
+69shu*##.yueduad1
+69shu*##.ranking
+69shu*##.foot
+69shu*##.yuedutuijian
+69shu*##.baocuo
+69shu*##.tools.active
+69shu*##li.col-4 > div.mybox
 
 ! 69story 
 69story.com###banner25
