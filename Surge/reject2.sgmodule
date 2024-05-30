@@ -1,5 +1,5 @@
 #!name=reject2
-#!desc=v2024-03-03
+#!desc=v2024-05-30
 
 
 [Rule]
@@ -21,8 +21,8 @@ URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/pointreward\/r\d{8}\/campaign_icon_ur
 URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/pointreward\/r\d{8}\/campaign_icon_url-.*\.(png|jpg|jpeg)$, REJECT
 # LINE > 錢包 > LINE BANK > 廣告
 URL-REGEX, ^https:\/\/line-img\.linebank\.com\.tw\/cms\/line_wallet\/wallet_ad\/, REJECT
-# LINE > 錢包 > LINE BANK > 廣告
 URL-REGEX, ^https:\/\/line-img\.linebank\.com\.tw\/cms\/line_wallet\/wallet_ad_, REJECT
+URL-REGEX, ^https:\/\/line-img\.linebank\.com\.tw\/cms\/line_wallet\/wallet_cg_ad\/, REJECT
 
 
 # Line > VOOM
@@ -65,6 +65,10 @@ URL-REGEX, ^https:\/\/18comic\.vip\/.*\.gif, REJECT
 # 愛薇兒
 URL-REGEX, ^https:\/\/www\.avcome\.com\/.*\.gif$, REJECT
 URL-REGEX, ^https:\/\/www\.avcome\.com\/pic\/.*\.jpg$, REJECT
+
+# 18H漫畫
+DOMAIN, ammcg.imgstream2.com, REJECT
+DOMAIN, mmfree1.com, REJECT
 
 # 元大 > 開啟時廣告
 URL-REGEX, ^https:\/\/ys\.yuanta\.com\.tw\/nexus_notice\/noticeshow_app\.aspx\?\d{6}$, REJECT
