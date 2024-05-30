@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2024-05-10
+! Version: 2024-05-30
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -48,6 +48,8 @@ cn.pornhub.com###flagVideoBtn
 cn.pornhub.com###playlistModal
 cn.pornhub.com###js-likedVideosTooltip
 cn.pornhub.com##i.ph-icon-flag
+cn.pornhub.com##h3.heading1
+cn.pornhub.com##div.rtaDisclaimerWrapper
 
 ! 18H漫畫
 18h.mm-cg.com##.ut1_img_ex_content
