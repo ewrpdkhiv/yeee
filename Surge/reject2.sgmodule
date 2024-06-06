@@ -1,5 +1,5 @@
 #!name=reject2
-#!desc=v2024-05-30
+#!desc=v2024-06-06
 
 
 [Rule]
@@ -28,17 +28,24 @@ URL-REGEX, ^https:\/\/line-img\.linebank\.com\.tw\/cms\/line_wallet\/wallet_cg_a
 # Line > VOOM
 # LINE > VOOM > 推薦
 URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/discover\/api\/v\d\/recommendTab\/feeds$, REJECT
+URL-REGEX, ^https:\/\/legy\.line-apps\.com\/tl\/discover\/api\/v\d\/recommendTab\/feeds$, REJECT
 # LINE > VOOM > 追蹤中
 URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v\d{2}\/timeline\/tab\/contents\.json$, REJECT
+URL-REGEX, ^https:\/\/legy\.line-apps\.com\/tl\/api\/v\d{2}\/timeline\/tab\/contents\.json$, REJECT
+# LINE > VOOM > 搜尋
+URL-REGEX, ^https:\/\/legy\.line-apps\.com\/tl\/discover\/api\/v1\/collage\/searchEntry$, REJECT
+#!LINE > VOOM > 不明
+URL-REGEX, ^https:\/\/legy\.line-apps\.com\/.*\/timeline, REJECT
 
 # Line > 其他
 # LINE > 主頁 > 推薦貼圖
 URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/EXT\/home\/sapi\/v4p\/flex$, REJECT
-#!LINE > VOOM > 不明
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v\d{2}\/timeline\/tab\/status\.json\?includeRebootStatus=(0|1)$, REJECT
+URL-REGEX, ^https:\/\/legy\.line-apps\.com\/EXT\/home\/recommendation\/flex$, REJECT
 # LINE > Story
 URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/st\/api\/v\d\/story\/newstory$, REJECT
+URL-REGEX, ^https:\/\/legy\.line-apps\.com\/st\/api\/v\d\/story\/newstory$, REJECT
 URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/st\/api\/v\d\/story\/recentstory\/list$, REJECT
+URL-REGEX, ^https:\/\/legy\.line-apps\.com\/st\/api\/v\d\/story\/recentstory\/list$, REJECT
 URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/timeline-service\/TL_renewal_intro_.*\.mp4$, REJECT
 # LINE > 移除搜尋裡面亂七八糟的結果
 DOMAIN, search.line.me, REJECT
@@ -109,8 +116,30 @@ URL-REGEX, ^https:\/\/adapi\.mitake\.com\.tw\/v1\/getADFileList\?\d+$, REJECT
 URL-REGEX, ^https:\/\/img\.jkos\.com\.tw\/ad\/image\/.*\.(png|jpg|jpeg)$, REJECT
 DOMAIN, ad-img.jkos.com.tw, REJECT
 
+#HamiPay
 #HamiPay > 首頁廣告
 URL-REGEX, ^https:\/\/hamipoint\.cht\.com\.tw\/api\/cht\/getHomeBanners, REJECT
+# HamiPay > 一些小正方形商家圖案
+URL-REGEX, ^https:\/\/portal-hamipoint\.cdn\.hinet\.net\/storage\/shop-brands\/.*, REJECT
+# HamiPay > 活動圖案（月份+年份）
+URL-REGEX, ^https:\/\/portal-hamipoint\.cdn\.hinet\.net\/.*\/[A-Z][a-z]+\d{4}\/.*, REJECT
+# HamiPay > gif動圖
+URL-REGEX, ^https:\/\/portal-hamipoint\.cdn\.hinet\.net\/.*\.gif$, REJECT
+# HamiPay > 信用卡圖案
+URL-REGEX, ^https:\/\/portal-hamipoint\.cdn\.hinet\.net\/storage\/features\/.*, REJECT
+# HamiPay > 橫幅廣告
+URL-REGEX, ^https:\/\/portal-hamipoint\.cdn\.hinet\.net\/storage\/banners\/.*, REJECT
+
+# Openpoint
+# Openpoint > Banner
+URL-REGEX, ^https:\/\/redeem\.openpoint\.com\.tw\/.*Banner\/, REJECT
+# Openpoint > i預購排行榜照片
+DOMAIN, 711go.7-11.com.tw, REJECT
+# Openpoint > 博客來排行榜照片
+DOMAIN, im1.book.com.tw, REJECT
+DOMAIN, im2.book.com.tw, REJECT
+# Openpoint > 優質推薦Banner
+DOMAIN, opmabannerimage.openpoint.com.tw, REJECT
 
 
 [MITM]
