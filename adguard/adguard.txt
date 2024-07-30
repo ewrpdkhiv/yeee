@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2024-05-30
+! Version: 2024-07-30
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -60,6 +60,7 @@ cn.pornhub.com##div.rtaDisclaimerWrapper
 18h.mm-cg.com##.div_adhost
 18h.mm-cg.com##img[border="0"][width="1000px"]
 
+
 ! 汙汙漫畫
 www.comicbox.xyz##.list_recommend3
 www.comicbox.xyz##.active
@@ -84,6 +85,8 @@ www.comicbox.xyz###comment
 18comic.vip##.btn.btn-primary
 18comic.vip##.fas.fa-store-alt
 18comic.vip##.fas.fa-user-circle
+18comic.vip##div.hidden-lg
+18comic.vip###billboard-modal
 
 
 ! 愛薇兒
@@ -141,12 +144,14 @@ web.bc3ts.net##div.OpenApp_rootGNltP.OpenApp_rootWithFooterComment6i0hB
 abmedia.io###pum-47873
 businesstoday.com.tw###showNext
 eats.quickclick.cc##.notify_fixed.ad_bottom0
+finance.ettoday.net###adsense_matched_content_2
+finance.ettoday.net##div.iframe-ad
 hamipoint.cht.com.tw##.advbox
+health.ettoday.net##div.iframe-ad
 histock.tw###fullsiteAD
 m.mobile01.com###fancybox-container-1
 m.happymh.com##article.jss29
 m.happymh.com##div.jss7
-
 managertoday.com.tw##img.w-12.sm
 money.udn.com##div.appbanner
 sspai.com###btn-call-app
@@ -157,6 +162,3 @@ view.inews.qq.com##.normal_padding__gVUr8
 wealth.businessweekly.com.tw###_popIn_recommend
 zhihu.com##.ContentItem-actions.Sticky.RichContent-actions.is-fixed.is-bottom
 zh.moegirl.org.cn###moe-open-in-app
-
-
-
