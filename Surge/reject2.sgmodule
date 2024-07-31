@@ -52,7 +52,7 @@ URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/st\/api\/v\d\/story\/recentstory\/lis
 URL-REGEX, ^https:\/\/legy\.line-apps\.com\/st\/api\/v\d\/story\/recentstory\/list$, REJECT
 URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/timeline-service\/TL_renewal_intro_.*\.mp4$, REJECT
 # LINE > 移除搜尋裡面亂七八糟的結果
-DOMAIN, search.line.me, REJECT
+# DOMAIN, search.line.me, REJECT
 # LINE > 從下而上的廣告，似乎是先載入圖片，後面在彈出，彈出找不到規則
 URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/wallet\/targeted-popup\/, REJECT
 # LINE > 小橫條
