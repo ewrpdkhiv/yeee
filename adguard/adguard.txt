@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2024-07-30
+! Version: 2024-09-20
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -13,6 +13,7 @@
 69shuba.*##.baocuo
 69shuba.*##.tools.active
 69shuba.*##li.col-4 > div.mybox
+69shuba.*##.contentadv
 
 ! 69story 
 69story.com###banner25
@@ -149,6 +150,7 @@ finance.ettoday.net##div.iframe-ad
 hamipoint.cht.com.tw##.advbox
 health.ettoday.net##div.iframe-ad
 histock.tw###fullsiteAD
+m.8591.com.tw##a.account-bn.flex.align-center
 m.mobile01.com###fancybox-container-1
 m.happymh.com##article.jss29
 m.happymh.com##div.jss7
