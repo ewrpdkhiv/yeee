@@ -1,5 +1,5 @@
 #!name=reject1
-#!desc=v2024-05-30
+#!desc=v2024-09-20
 
 [Rule]
 # blackmatrix7 > 知乎廣告攔截（搭配mitm）
@@ -8,8 +8,7 @@ RULE-SET, https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/
 # TW165 台灣反詐騙
 #https://github.com/FutaGuard/LowTechFilter
 DOMAIN-SET, https://filter.futa.gg/TW165_domains.txt, REJECT, notification-text="165詐騙",notification-interval=3
-# LowTechHost
-DOMAIN-SET, https://filter.futa.gg/hosts_domains.txt, REJECT
+
 
 # Hagezi 最輕量版Light
 DOMAIN-SET, https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/light.txt, REJECT
