@@ -1,5 +1,5 @@
 #!name=reject2
-#!desc=v2024-09-20
+#!desc=v2024-11-21
 
 
 [Rule]
@@ -31,10 +31,8 @@ URL-REGEX, ^https:\/\/line-img\.linebank\.com\.tw\/cms\/line_wallet\/wallet_cg_a
 
 # Line > VOOM
 # LINE > VOOM > 推薦
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/discover\/api\/v\d\/recommendTab\/feeds$, REJECT
 URL-REGEX, ^https:\/\/legy\.line-apps\.com\/tl\/discover\/api\/v\d\/recommendTab\/feeds$, REJECT
 # LINE > VOOM > 追蹤中
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/tl\/api\/v\d{2}\/timeline\/tab\/contents\.json$, REJECT
 URL-REGEX, ^https:\/\/legy\.line-apps\.com\/tl\/api\/v\d{2}\/timeline\/tab\/contents\.json$, REJECT
 # LINE > VOOM > 搜尋
 URL-REGEX, ^https:\/\/legy\.line-apps\.com\/tl\/discover\/api\/v1\/collage\/searchEntry$, REJECT
@@ -43,12 +41,9 @@ URL-REGEX, ^https:\/\/legy\.line-apps\.com\/.*\/timeline, REJECT
 
 # Line > 其他
 # LINE > 主頁 > 推薦貼圖
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/EXT\/home\/sapi\/v4p\/flex$, REJECT
 URL-REGEX, ^https:\/\/legy\.line-apps\.com\/EXT\/home\/recommendation\/flex$, REJECT
 # LINE > Story
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/st\/api\/v\d\/story\/newstory$, REJECT
 URL-REGEX, ^https:\/\/legy\.line-apps\.com\/st\/api\/v\d\/story\/newstory$, REJECT
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/st\/api\/v\d\/story\/recentstory\/list$, REJECT
 URL-REGEX, ^https:\/\/legy\.line-apps\.com\/st\/api\/v\d\/story\/recentstory\/list$, REJECT
 URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/timeline-service\/TL_renewal_intro_.*\.mp4$, REJECT
 # LINE > 移除搜尋裡面亂七八糟的結果
@@ -57,8 +52,6 @@ URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/timeline-service\/TL_renewal_intro_.*
 URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/wallet\/targeted-popup\/, REJECT
 # LINE > 小橫條
 URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/, REJECT
-# LINE > 主頁 > 底下 > 推薦貼圖
-URL-REGEX, ^https:\/\/gw\.line\.naver\.jp\/EXT\/home\/recommendation\/flex$, REJECT
 # Line錢包中間訊息
 URL-REGEX, ^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/WalletTab_Middle, REJECT
 # 富邦LINE廣告
@@ -156,4 +149,4 @@ URL-REGEX, ^https:\/\/service\.cht\.com\.tw\/dashboard\/SiteCoreADItems$, REJECT
 
 
 [MITM]
-hostname = %APPEND% linepaytw-cms.line-scdn.net, obs.line-scdn.net, vos.line-scdn.net, ec-bot-obs.line-scdn.net, line-img.linebank.com.tw, gw.line.naver.jp, legy.line-apps.com, manager.line-scdn.net, lan3rd.line.me, www.comicbox.xyz, 18comic.vip, www.avcome.com, gahost3.imgscloud.com, gbhost3.imgscloud.com, gchost3.imgscloud.com, fahost1.imgstream2.com, fbhost1.imgstream2.com, fchost1.imgstream2.com, d.bp.blogspot.com, ys.yuanta.com.tw, api.kkmh.com, mangaapi.manhuaren.net, mangaapi.manhuaren.com, magev6.if.qidian.com, api.zhihu.com, hiking.biji.co, hikingbook.net, megapx-assets.dcard.tw, res.8591.com.tw, adapi.mitake.com.tw, img.jkos.com.tw, ad-img.jkos.com.tw, hamipoint.cht.com.tw, portal-hamipoint.cdn.hinet.net, redeem.openpoint.com.tw, service.cht.com.tw
+hostname = %APPEND% linepaytw-cms.line-scdn.net, obs.line-scdn.net, vos.line-scdn.net, ec-bot-obs.line-scdn.net, line-img.linebank.com.tw, legy.line-apps.com, manager.line-scdn.net, lan3rd.line.me, www.comicbox.xyz, 18comic.vip, www.avcome.com, gahost3.imgscloud.com, gbhost3.imgscloud.com, gchost3.imgscloud.com, fahost1.imgstream2.com, fbhost1.imgstream2.com, fchost1.imgstream2.com, d.bp.blogspot.com, ys.yuanta.com.tw, api.kkmh.com, mangaapi.manhuaren.net, mangaapi.manhuaren.com, magev6.if.qidian.com, api.zhihu.com, hiking.biji.co, hikingbook.net, megapx-assets.dcard.tw, res.8591.com.tw, adapi.mitake.com.tw, img.jkos.com.tw, ad-img.jkos.com.tw, hamipoint.cht.com.tw, portal-hamipoint.cdn.hinet.net, redeem.openpoint.com.tw, service.cht.com.tw
