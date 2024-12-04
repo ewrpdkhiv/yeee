@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2024-09-20
+! Version: 2024-12-04
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -34,11 +34,11 @@ xvideos.com##.icf-pencil
 xvideos.com##.thread-node-metadata
 xvideos.com##.thread-node-btn-post
 xvideos.com##.botLinks
-xvideos.com###v-actions-overflow-menu
-xvideos.com###header-mobile-right
-xvideos.com###mobile-header-links
-xvideos.com###v-actions > div.tabs > button.save
-xvideos.com###v-actions > div.tabs > button.dl.tab-button
+! xvideos.com###v-actions-overflow-menu
+! xvideos.com###header-mobile-right
+! xvideos.com###mobile-header-links
+! xvideos.com###v-actions > div.tabs > button.save
+! xvideos.com###v-actions > div.tabs > button.dl.tab-button
 
 ! pronhub 
 cn.pornhub.com##.js_videoSubscribeButton
