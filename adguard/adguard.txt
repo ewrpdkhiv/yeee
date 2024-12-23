@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2024-12-04
+! Version: 2024-12-23
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -15,7 +15,7 @@
 69shuba.*##li.col-4 > div.mybox
 69shuba.*##.contentadv
 
-! 69story 
+! 69story
 69story.com###banner25
 69story.com###banner55
 69story.com###bkat
@@ -26,19 +26,13 @@ bg3.co##.div_feedback
 bg3.co##.more_recommend
 bg3.co##.social_share_frame
 
-! 思兔閱讀 
+! 思兔閱讀
 sto520.com##.div_ads_label
 
 ! xvideos
 xvideos.com##.icf-pencil
 xvideos.com##.thread-node-metadata
-xvideos.com##.thread-node-btn-post
 xvideos.com##.botLinks
-! xvideos.com###v-actions-overflow-menu
-! xvideos.com###header-mobile-right
-! xvideos.com###mobile-header-links
-! xvideos.com###v-actions > div.tabs > button.save
-! xvideos.com###v-actions > div.tabs > button.dl.tab-button
 
 ! pronhub 
 cn.pornhub.com##.js_videoSubscribeButton
@@ -140,6 +134,16 @@ abmedia.io##.wp-block-groupinner-container
 web.bc3ts.net##div.card.PostCommentCard_commentAddWrapperIKgXd
 web.bc3ts.net##div.OpenApp_rootGNltP.OpenApp_rootWithFooterComment6i0hB
 
+! 經濟日報
+money.udn.com##div.aside-actvity
+money.udn.com##div.notice-mask
+money.udn.com###threemin
+money.udn.com##div.noticeBox
+
+# CSDN博客
+blog.csdn.net##div.passport-login-tip-container.false
+blog.csdn.net##div.passport-login-container
+
 ! 其他
 18av.mm-cg.com##.ut1_img_ex_content
 abmedia.io###pum-47873
@@ -150,6 +154,7 @@ finance.ettoday.net##div.iframe-ad
 hamipoint.cht.com.tw##.advbox
 health.ettoday.net##div.iframe-ad
 histock.tw###fullsiteAD
+home.gamer.com.tw##div.image-status-bar
 m.8591.com.tw##a.account-bn.flex.align-center
 m.mobile01.com###fancybox-container-1
 m.happymh.com##article.jss29
@@ -159,6 +164,7 @@ money.udn.com##div.appbanner
 sspai.com###btn-call-app
 storm.mg###stock_bar_inner
 setn.com##div.wrapper > div.video-container
+treemi9.blogspot.com###HTML1
 tw.chartoo.com###eq > div.mr
 view.inews.qq.com##.normal_padding__gVUr8
 wealth.businessweekly.com.tw###_popIn_recommend
