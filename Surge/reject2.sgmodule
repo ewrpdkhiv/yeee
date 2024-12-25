@@ -72,8 +72,12 @@ URL-REGEX, ^https:\/\/www\.avcome\.com\/.*\.gif$, REJECT
 URL-REGEX, ^https:\/\/www\.avcome\.com\/pic\/.*\.jpg$, REJECT
 
 # 18H漫畫
-URL-REGEX, ^https:\/\/g[a-c]host3\.imgscloud\.com\/.*\.gif$, REJECT
-URL-REGEX, ^https:\/\/f[a-c]host1\.imgstream2\.com\/.*\/(wp|ei)\/, REJECT
+URL-REGEX, ^https:\/\/gahost3\.imgscloud\.com\/.*\.gif$, REJECT
+URL-REGEX, ^https:\/\/gbhost3\.imgscloud\.com\/.*\.gif$, REJECT
+URL-REGEX, ^https:\/\/gchost3\.imgscloud\.com\/.*\.gif$, REJECT
+URL-REGEX, ^https:\/\/fahost1\.imgstream2\.com\/.*\/(wp|ei)\/, REJECT
+URL-REGEX, ^https:\/\/fbhost1\.imgstream2\.com\/.*\/(wp|ei)\/, REJECT
+URL-REGEX, ^https:\/\/fchost1\.imgstream2\.com\/.*\/(wp|ei)\/, REJECT
 URL-REGEX, ^https:\/\/\d\.bp\.blogspot\.com\/.*.gif$, REJECT
 DOMAIN, ammcg.imgstream2.com, REJECT
 DOMAIN, mmfree1.com, REJECT
