@@ -79,7 +79,7 @@ DOMAIN, ammcg.imgstream2.com, REJECT
 DOMAIN, mmfree1.com, REJECT
 
 # xhamster
-URL-REGEX,^https:\/\/xhamster\.com\/.*\/ad\/,REJECT
+URL-REGEX, ^https:\/\/xhamster\.com\/.*\/ad\/,REJECT
 
 # 元大 > 開啟時廣告
 URL-REGEX, ^https:\/\/ys\.yuanta\.com\.tw\/nexus_notice\/noticeshow_app\.aspx\?\d{6}$, REJECT
