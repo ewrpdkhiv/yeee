@@ -1,5 +1,5 @@
 #!name=reject2
-#!desc=v2024-12-29
+#!desc=v2025-01-07
 
 
 [Rule]
@@ -159,7 +159,7 @@ URL-REGEX, ^https:\/\/service\.cht\.com\.tw\/dashboard\/SiteCoreADItems$, REJECT
 # 1800
 DOMAIN, vv.video.qq.com, REJECT
 # 657
-DOMAIN, sentry.io, REJECT
+DOMAIN-SUFFIX, ingest.sentry.io, REJECT
 # 553
 DOMAIN, fbs.smoot.apple.com, REJECT
 # 373
