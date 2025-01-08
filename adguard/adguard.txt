@@ -1,10 +1,11 @@
 ! Title: Private Filter
-! Version: 2024-12-23
+! Version: 2025-1-8
 ! Expires: 1 hour
 ! Homepage: None
 
 
 ! 69書吧
+69shuba.*##div.infolastcontent
 69shuba.*##.tuijian
 69shuba.*##.yueduad1
 69shuba.*##.ranking
@@ -139,15 +140,21 @@ money.udn.com##div.aside-actvity
 money.udn.com##div.notice-mask
 money.udn.com###threemin
 money.udn.com##div.noticeBox
+money.udn.com##div.breaking-news
 
 # CSDN博客
 blog.csdn.net##div.passport-login-tip-container.false
 blog.csdn.net##div.passport-login-container
+blog.csdn.net##button.btn-code-notes.mdeditor
+blog.csdn.net##div.csdn-side-toolbar
+blog.csdn.net##div.left-toolbox
 
 ! 其他
 18av.mm-cg.com##.ut1_img_ex_content
 abmedia.io###pum-47873
 businesstoday.com.tw###showNext
+cloud.tencent.com###ask-detail-content-product-container
+developer.baidu.com##div.content-container
 eats.quickclick.cc##.notify_fixed.ad_bottom0
 finance.ettoday.net###adsense_matched_content_2
 finance.ettoday.net##div.iframe-ad
@@ -161,6 +168,7 @@ m.happymh.com##article.jss29
 m.happymh.com##div.jss7
 managertoday.com.tw##img.w-12.sm
 money.udn.com##div.appbanner
+openatomworkshop.csdn.net##div.user-desc.user-desc-fix
 sspai.com###btn-call-app
 storm.mg###stock_bar_inner
 setn.com##div.wrapper > div.video-container
@@ -168,5 +176,6 @@ treemi9.blogspot.com###HTML1
 tw.chartoo.com###eq > div.mr
 view.inews.qq.com##.normal_padding__gVUr8
 wealth.businessweekly.com.tw###_popIn_recommend
+youtube.com##yt-reel-metapanel-view-model.ytReelMetapanelViewModelHost
 zhihu.com##.ContentItem-actions.Sticky.RichContent-actions.is-fixed.is-bottom
 zh.moegirl.org.cn###moe-open-in-app
