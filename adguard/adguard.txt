@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-1-9
+! Version: 2025-2-2
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -46,6 +46,7 @@ cn.pornhub.com##div.rtaDisclaimerWrapper
 18h.mm-cg.com##.di_img
 18h.mm-cg.com##.div_adhost
 18h.mm-cg.com##img[border="0"][width="1000px"]
+18h.mm-cg.com##.rand_list
 
 
 ! 汙汙漫畫
