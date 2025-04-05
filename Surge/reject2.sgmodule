@@ -1,5 +1,5 @@
 #!name=reject2
-#!desc=v2025-04-04
+#!desc=v2025-04-05
 
 
 [Rule]
@@ -173,7 +173,7 @@ DOMAIN, firebaselogging-pa.googleapis.com, REJECT
 # 5300
 DOMAIN, jp-col-tcp.nelo.linecorp.com, REJECT
 # 3200
-DOMAIN-SUFFIX, qq.com, REJECT
+DOMAIN, gatherer.m.qq.com, REJECT
 # 1600
 DOMAIN, www.googletagmanager.com, REJECT
 # 463
