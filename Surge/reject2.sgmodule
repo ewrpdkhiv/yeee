@@ -178,6 +178,9 @@ DOMAIN, gatherer.m.qq.com, REJECT
 DOMAIN, www.googletagmanager.com, REJECT
 # 463
 DOMAIN-SUFFIX, gtimg.cn, REJECT
+# 300
+DOMAIN-SUFFIX, gamecenter.qq.com, REJECT
+
 # 283
 DOMAIN-SUFFIX, huya.com, REJECT
 # 143
