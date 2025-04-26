@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-4-26.4
+! Version: 2025-4-26.5
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -45,8 +45,6 @@ cn.pornhub.com##div.rtaDisclaimerWrapper
 18h.mm-cg.com##.animenu__nav
 18h.mm-cg.com##.di_img
 18h.mm-cg.com##.div_adhost
-18h.mm-cg.com###phCG_OnOff
-18h.mm-cg.com##.Bypass_sp
 18h.mm-cg.com##.rand_list
 18h.mm-cg.com##img[border="0"][width="1000px"]
 18h.mm-cg.com##span[class="redbig"]
@@ -54,8 +52,8 @@ cn.pornhub.com##div.rtaDisclaimerWrapper
 18h.mm-cg.com##img[border="0"][width="500"][height="200"]
 18h.mm-cg.com##span[style="font-size:20px;color:#B00000;"]
 18h.mm-cg.com##span[style="font-size:20px;"]
-! 18h.mm-cg.com##div[id="phCG_OnOff"]
-! 18h.mm-cg.com##div[class="Bypass_sp"]
+18h.mm-cg.com##div[id="phCG_OnOff"]
+18h.mm-cg.com##div[class="Bypass_sp"]
 
 ! 汙汙漫畫
 www.comicbox.xyz##.list_recommend3
