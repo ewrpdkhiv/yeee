@@ -6,6 +6,7 @@
 
 ! 69書吧
 69shuba.com##li.col-4
+69shuba.com##li#games_ads
 
 ! 69story
 69story.com###banner25
