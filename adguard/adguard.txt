@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-05-19
+! Version: 2025-05-22
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -162,6 +162,8 @@ health.ettoday.net##div.iframe-ad
 histock.tw###fullsiteAD
 home.gamer.com.tw##div.image-status-bar
 m.8591.com.tw##a.account-bn.flex.align-center
+m.8591.com.tw##div.van-overlay
+m.8591.com.tw##.list-banner
 m.mobile01.com###fancybox-container-1
 m.happymh.com##article.jss29
 m.happymh.com##div.jss7
