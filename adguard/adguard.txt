@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-05-24-2
+! Version: 2025-05-24-3
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -9,6 +9,7 @@
 69shuba.com##li#games_ads
 69shuba.com##.yuedutuijian
 69shuba.com###pagefootermenu
+69shuba.com###jubao
 
 ! 69story
 69story.com###banner25
