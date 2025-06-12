@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-05-24-3
+! Version: 2025-06-12-3
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -29,6 +29,7 @@ sto520.com##.div_ads_label
 xvideos.com##.icf-pencil
 xvideos.com##.thread-node-metadata
 xvideos.com##.botLinks
+xvideos.com##div[style="background: rgb(222, 38, 0)"]
 
 ! pronhub 
 cn.pornhub.com##.js_videoSubscribeButton
