@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-06-29
+! Version: 2025-08-28
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -127,6 +127,12 @@ tw.news.yahoo.com###postArticle
 
 ! 台灣小說網
 m.xsw.tw##.back
+
+! 起點
+www.qidian.com##.review
+www.qidian.com###r-authorSay
+www.qidian.com##._wrapper_131ir_193
+www.qidian.com##.chapter-end-qrcode
 
 ! Dcard
 dcard.tw##.atm_cs_12oz46p.atm_c8_eai3rd.atm_g3_xy5hu5.atm_7l_1o85cey.atm_l8_qnkx.m1ch8o4s
