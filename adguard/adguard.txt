@@ -167,6 +167,12 @@ codelove.tw##.container.mt-5
 codelove.tw##.nice-container
 codelove.tw##.alert.alert-secondary.my-0
 
+! 六角
+www.hexschool.com###footerContact
+www.hexschool.com###nav
+www.hexschool.com##.navbar-fixed-bottom
+www.hexschool.com##.footer
+
 ! 其他
 18av.mm-cg.com##.ut1_img_ex_content
 abmedia.io###pum-47873
@@ -199,3 +205,18 @@ wealth.businessweekly.com.tw###_popIn_recommend
 youtube.com##yt-reel-metapanel-view-model.ytReelMetapanelViewModelHost
 zhihu.com##.ContentItem-actions.Sticky.RichContent-actions.is-fixed.is-bottom
 zh.moegirl.org.cn###moe-open-in-app
+
+
+! Facebook 行動版網頁規則: 
+! (AdGuard | uBlock Origin)
+
+! 登入提示彈窗（modal）
+m.facebook.com##div[role="dialog"][aria-modal="true"]:has(a[href*="/login/"], a[href*="/reg/"]):upward(div.fixed-container)
+
+! 頂部登入工具列
+m.facebook.com##div.fixed-container.top:has([role="button"][aria-label*="登入"i], [role="button"][aria-label*="Log In"i], a[href*="/login/"])
+
+! 避免無法滾動
+m.facebook.com##body:remove-class(prevent-scrolling)
+
+m.facebook.com##html, body:style(overflow: auto !important; scroll-behavior: auto !important;)
