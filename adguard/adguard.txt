@@ -205,7 +205,7 @@ wealth.businessweekly.com.tw###_popIn_recommend
 youtube.com##yt-reel-metapanel-view-model.ytReelMetapanelViewModelHost
 zhihu.com##.ContentItem-actions.Sticky.RichContent-actions.is-fixed.is-bottom
 zh.moegirl.org.cn###moe-open-in-app
-
+medium.com##input[placeholder="Enter your email"]:upward(5)
 
 ! Facebook 行動版網頁規則: 
 ! (AdGuard | uBlock Origin)
