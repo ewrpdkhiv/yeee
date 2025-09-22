@@ -76,6 +76,14 @@ www.comicbox.xyz##section.mod-recommend3 > h2
 www.comicbox.xyz###img_banner_77_2
 www.comicbox.xyz###btn_toolFav
 www.comicbox.xyz###comment
+##.bannerImg
+##.global-navbar
+##.wrapper
+##.footer-box
+##.note-top
+##.detail-comment-fix-bottom
+##.friendship
+##.games
 
 ! 18comic
 18comic.vip##.a35c7-1_4_sticky2
