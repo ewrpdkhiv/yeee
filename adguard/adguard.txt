@@ -76,9 +76,10 @@ www.comicbox.xyz##section.mod-recommend3 > h2
 www.comicbox.xyz###img_banner_77_2
 www.comicbox.xyz###btn_toolFav
 www.comicbox.xyz###comment
+www.comicbox.xyz##.wrapper
+www.55comic.com##.wrapper
 ##.bannerImg
 ##.global-navbar
-##.wrapper
 ##.footer-box
 ##.note-top
 ##.detail-comment-fix-bottom
