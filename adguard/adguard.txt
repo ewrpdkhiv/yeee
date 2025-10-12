@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-08-31
+! Version: 2025-10-05
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -167,7 +167,8 @@ blog.csdn.net##div.passport-login-tip-container.false
 blog.csdn.net##div.passport-login-container
 blog.csdn.net##button.btn-code-notes.mdeditor
 blog.csdn.net##div.csdn-side-toolbar
-blog.csdn.net##div.left-toolbox
+blog.csdn.net##.left-toolbox
+blog.csdn.net###operate
 
 ! codelove
 codelove.tw##.sticky-top
