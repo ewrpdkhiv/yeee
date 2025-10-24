@@ -1,7 +1,7 @@
 ! Title: Private Filter
 ! Version: 2025-10-24
 ! Expires: 1 hour
-! Homepage: None
+! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
 
 ! 69書吧
