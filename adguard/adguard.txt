@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-10-05
+! Version: 2025-10-24
 ! Expires: 1 hour
 ! Homepage: None
 
@@ -161,6 +161,17 @@ money.udn.com##div.notice-mask
 money.udn.com###threemin
 money.udn.com##div.noticeBox
 money.udn.com##div.breaking-news
+money.udn.com##div.appbanner
+
+! udn新聞
+udn.com##.social-wrapper
+udn.com##.article-content__ads--bd
+udn.com##.discuss-board
+udn.com##.ec-section
+udn.com##.facebook-comment
+udn.com##.audio-player
+udn.com##.breaking-news__wrapper
+
 
 ! CSDN博客
 blog.csdn.net##div.passport-login-tip-container.false
@@ -183,6 +194,35 @@ www.hexschool.com###nav
 www.hexschool.com##.navbar-fixed-bottom
 www.hexschool.com##.footer
 
+! YouTube Shorts
+
+! YT Homepage - Hide the Shorts section
+youtube.com##[is-shorts]
+! YT Menu - Hide the Shorts button
+www.youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
+! YT Search - Hide Shorts
+www.youtube.com##ytd-search ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-video-renderer)
+! YT Search and Channels - Hide the Shorts sections
+www.youtube.com##ytd-reel-shelf-renderer
+! YT Channels - Hide the Shorts tab
+www.youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:nth-of-type(3):has-text(Shorts)
+! YT Subscriptions - Hide Shorts - Grid View
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer [overlay-style="SHORTS"]:upward(ytd-grid-video-renderer)
+! YT Subscriptions - Hide Shorts - List View
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-item-section-renderer)
+! YT Subscriptions - New Layout - Hide Shorts
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer [overlay-style="SHORTS"]:upward(ytd-rich-item-renderer)
+! YT Sidebar - Hide Shorts
+www.youtube.com###related ytd-compact-video-renderer [overlay-style="SHORTS"]:upward(ytd-compact-video-renderer)
+
+! YT Mobile - Hide the Shorts Menu button
+m.youtube.com##.pivot-shorts:upward(ytm-pivot-bar-item-renderer)
+! YT Mobile - Hide Shorts sections
+m.youtube.com##ytm-reel-shelf-renderer
+! YT Mobile - Hide Shorts in search results
+m.youtube.com##ytm-search ytm-video-with-context-renderer [data-style="SHORTS"]
+
+
 ! 其他
 18av.mm-cg.com##.ut1_img_ex_content
 abmedia.io###pum-47873
@@ -203,7 +243,8 @@ m.mobile01.com###fancybox-container-1
 m.happymh.com##article.jss29
 m.happymh.com##div.jss7
 managertoday.com.tw##img.w-12.sm
-money.udn.com##div.appbanner
+www.udemy.com##div[data-purpose="video-sneak-peek-container"]
+
 openatomworkshop.csdn.net##div.user-desc.user-desc-fix
 sspai.com###btn-call-app
 storm.mg###stock_bar_inner
