@@ -257,6 +257,7 @@ youtube.com##yt-reel-metapanel-view-model.ytReelMetapanelViewModelHost
 zhihu.com##.ContentItem-actions.Sticky.RichContent-actions.is-fixed.is-bottom
 zh.moegirl.org.cn###moe-open-in-app
 medium.com##input[placeholder="Enter your email"]:upward(5)
+medium.com##button[aria-label="responses"]:upward(6)
 
 ! Facebook 行動版網頁規則: 
 ! (AdGuard | uBlock Origin)
