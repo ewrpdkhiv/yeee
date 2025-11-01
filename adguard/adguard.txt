@@ -194,6 +194,14 @@ www.hexschool.com###nav
 www.hexschool.com##.navbar-fixed-bottom
 www.hexschool.com##.footer
 
+! medium
+! 文章中間要你輸入email的視窗
+medium.com##input[placeholder="Enter your email"]:upward(5)
+! 下方顯示讚數與留言的footer(視窗往下移動仍會佔版面)
+medium.com##button[aria-label="responses"]:upward(6)
+! 上方標題與medium的head(視窗往下移動仍會佔版面)
+medium.com##input[aria-label="search"]:upward(5)
+
 ! YouTube Shorts
 
 ! YT Homepage - Hide the Shorts section
@@ -256,8 +264,7 @@ wealth.businessweekly.com.tw###_popIn_recommend
 youtube.com##yt-reel-metapanel-view-model.ytReelMetapanelViewModelHost
 zhihu.com##.ContentItem-actions.Sticky.RichContent-actions.is-fixed.is-bottom
 zh.moegirl.org.cn###moe-open-in-app
-medium.com##input[placeholder="Enter your email"]:upward(5)
-medium.com##button[aria-label="responses"]:upward(6)
+
 
 ! Facebook 行動版網頁規則: 
 ! (AdGuard | uBlock Origin)
