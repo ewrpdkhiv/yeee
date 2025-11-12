@@ -202,8 +202,26 @@ medium.com##button[aria-label="responses"]:upward(6)
 ! 上方標題與medium的head(視窗往下移動仍會佔版面)
 medium.com##input[aria-label="search"]:upward(5)
 
-! YouTube Shorts
+! amazingtalker
+! 右側推薦欄
+amazingtalker.com##form[role="search"]:upward(5)
+! 頂部navbar
+amazingtalker.com###site-header
+! 下方推薦導師
+amazingtalker.com##.elementor-author-box__name:upward(12)
+! 下方其他推薦文章
+amazingtalker.com##a.elementor-post__read-more:upward(4)
+! footer
+amazingtalker.com##div.elementor-location-footer
 
+! vocus
+! 上方navbar
+vocus.cc##.icon-search:upward(5)
+! 下方
+vocus.cc##div[data-infinity-roll-role="fixed-reader-title"]
+
+
+! YouTube Shorts
 ! YT Homepage - Hide the Shorts section
 youtube.com##[is-shorts]
 ! YT Menu - Hide the Shorts button
