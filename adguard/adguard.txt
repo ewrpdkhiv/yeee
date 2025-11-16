@@ -220,6 +220,13 @@ vocus.cc##.icon-search:upward(5)
 ! 下方
 vocus.cc##div[data-infinity-roll-role="fixed-reader-title"]
 
+! 稀土掘金
+juejin.cn##.open-button.app-open-button
+juejin.cn##.action-box-wrap.action-bar
+juejin.cn##.byte-drawer__mask
+juejin.cn##.byte-drawer__wrapper
+juejin.cn##.suspension-panel
+juejin.cn##.article-suspended-panel.dynamic-data-ready
 
 ! YouTube Shorts
 ! YT Homepage - Hide the Shorts section
