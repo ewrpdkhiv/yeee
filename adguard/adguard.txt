@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-10-24
+! Version: 2025-11-17
 ! Expires: 1 hour
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -227,6 +227,7 @@ juejin.cn##.byte-drawer__mask
 juejin.cn##.byte-drawer__wrapper
 juejin.cn##.suspension-panel
 juejin.cn##.article-suspended-panel.dynamic-data-ready
+juejin.cn##.ad-container
 
 ! YouTube Shorts
 ! YT Homepage - Hide the Shorts section
