@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-11-17
+! Version: 2025-11-22
 ! Expires: 1 hour
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -180,6 +180,12 @@ blog.csdn.net##button.btn-code-notes.mdeditor
 blog.csdn.net##div.csdn-side-toolbar
 blog.csdn.net##.left-toolbox
 blog.csdn.net###operate
+blog.csdn.net##div[data-title="登录复制"]
+blog.csdn.net##.code-run-btn
+blog.csdn.net##.swiper-slide-box-remuneration
+blog.csdn.net##.profile-intro-name-boxOpration
+blog.csdn.net###toolbarBox
+blog.csdn.net###pcCommentBox
 
 ! codelove
 codelove.tw##.sticky-top
@@ -228,6 +234,8 @@ juejin.cn##.byte-drawer__wrapper
 juejin.cn##.suspension-panel
 juejin.cn##.article-suspended-panel.dynamic-data-ready
 juejin.cn##.ad-container
+juejin.cn##.code-block-extension-headerRight
+juejin.cn##.comment-login-guide:upward(3)
 
 ! YouTube Shorts
 ! YT Homepage - Hide the Shorts section
