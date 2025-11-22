@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-11-22
+! Version: 2025-11-22-2
 ! Expires: 1 hour
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -186,6 +186,7 @@ blog.csdn.net##.swiper-slide-box-remuneration
 blog.csdn.net##.profile-intro-name-boxOpration
 blog.csdn.net###toolbarBox
 blog.csdn.net###pcCommentBox
+blog.csdn.net##.btn-code-notes
 
 ! codelove
 codelove.tw##.sticky-top
@@ -286,7 +287,7 @@ m.happymh.com##article.jss29
 m.happymh.com##div.jss7
 managertoday.com.tw##img.w-12.sm
 www.udemy.com##div[data-purpose="video-sneak-peek-container"]
-
+www.storm.mg##.lineCommunity
 openatomworkshop.csdn.net##div.user-desc.user-desc-fix
 sspai.com###btn-call-app
 storm.mg###stock_bar_inner
