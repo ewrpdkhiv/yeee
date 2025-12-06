@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-11-22-2
+! Version: 2025-12-06
 ! Expires: 1 hour
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -194,6 +194,8 @@ codelove.tw##.alert.alert-success.mb-0.text-center.alert-edm.fixed-bottom
 codelove.tw##.container.mt-5
 codelove.tw##.nice-container
 codelove.tw##.alert.alert-secondary.my-0
+codelove.tw###edmModal
+codelove.tw##div[class="_bg-white rounded _border p-3 shopify-service-card"]
 
 ! 六角
 www.hexschool.com###footerContact
@@ -257,7 +259,6 @@ www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [ov
 www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer [overlay-style="SHORTS"]:upward(ytd-rich-item-renderer)
 ! YT Sidebar - Hide Shorts
 www.youtube.com###related ytd-compact-video-renderer [overlay-style="SHORTS"]:upward(ytd-compact-video-renderer)
-
 ! YT Mobile - Hide the Shorts Menu button
 m.youtube.com##.pivot-shorts:upward(ytm-pivot-bar-item-renderer)
 ! YT Mobile - Hide Shorts sections
@@ -266,11 +267,26 @@ m.youtube.com##ytm-reel-shelf-renderer
 m.youtube.com##ytm-search ytm-video-with-context-renderer [data-style="SHORTS"]
 
 
+! Facebook 行動版網頁規則: 
+! (AdGuard | uBlock Origin)
+! 登入提示彈窗（modal）
+m.facebook.com##div[role="dialog"][aria-modal="true"]:has(a[href*="/login/"], a[href*="/reg/"]):upward(div.fixed-container)
+! 頂部登入工具列
+m.facebook.com##div.fixed-container.top:has([role="button"][aria-label*="登入"i], [role="button"][aria-label*="Log In"i], a[href*="/login/"])
+! 避免無法滾動
+m.facebook.com##body:remove-class(prevent-scrolling)
+m.facebook.com##html, body:style(overflow: auto !important; scroll-behavior: auto !important;)
+
+
 ! 其他
+##.SearchBar-input:upward(8)
+##.ContentItem-actions
 18av.mm-cg.com##.ut1_img_ex_content
 abmedia.io###pum-47873
 businesstoday.com.tw###showNext
 cloud.tencent.com###ask-detail-content-product-container
+! 六角影片左邊sidebar無法縮小只好刪除
+courses.hexschool.com###courseSidebar
 developer.baidu.com##div.content-container
 eats.quickclick.cc##.notify_fixed.ad_bottom0
 finance.ettoday.net###adsense_matched_content_2
@@ -279,6 +295,7 @@ hamipoint.cht.com.tw##.advbox
 health.ettoday.net##div.iframe-ad
 histock.tw###fullsiteAD
 home.gamer.com.tw##div.image-status-bar
+juejin.cn##.ai-assistant-notification.ai-assistant-transition
 m.8591.com.tw##a.account-bn.flex.align-center
 m.8591.com.tw##div.van-overlay
 m.8591.com.tw##.list-banner
@@ -286,31 +303,19 @@ m.mobile01.com###fancybox-container-1
 m.happymh.com##article.jss29
 m.happymh.com##div.jss7
 managertoday.com.tw##img.w-12.sm
-www.udemy.com##div[data-purpose="video-sneak-peek-container"]
-www.storm.mg##.lineCommunity
 openatomworkshop.csdn.net##div.user-desc.user-desc-fix
+storm.mg##.lineCommunity
 sspai.com###btn-call-app
 storm.mg###stock_bar_inner
 setn.com##div.wrapper > div.video-container
 treemi9.blogspot.com###HTML1
 tw.chartoo.com###eq > div.mr
+udemy.com##div[data-purpose="video-sneak-peek-container"]
 view.inews.qq.com##.normal_padding__gVUr8
 wealth.businessweekly.com.tw###_popIn_recommend
 youtube.com##yt-reel-metapanel-view-model.ytReelMetapanelViewModelHost
+zhihu.com##footer[role="contentinfo"]
 zhihu.com##.ContentItem-actions.Sticky.RichContent-actions.is-fixed.is-bottom
 zh.moegirl.org.cn###moe-open-in-app
 
 
-! Facebook 行動版網頁規則: 
-! (AdGuard | uBlock Origin)
-
-! 登入提示彈窗（modal）
-m.facebook.com##div[role="dialog"][aria-modal="true"]:has(a[href*="/login/"], a[href*="/reg/"]):upward(div.fixed-container)
-
-! 頂部登入工具列
-m.facebook.com##div.fixed-container.top:has([role="button"][aria-label*="登入"i], [role="button"][aria-label*="Log In"i], a[href*="/login/"])
-
-! 避免無法滾動
-m.facebook.com##body:remove-class(prevent-scrolling)
-
-m.facebook.com##html, body:style(overflow: auto !important; scroll-behavior: auto !important;)
