@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2025-12-06
+! Version: 2026-04-03
 ! Expires: 1 hour
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -33,7 +33,7 @@ xvideos.com##.botLinks
 xvideos.com##div[style="display: flex; background: rgb(222, 38, 0); color: rgb(255, 255, 255); width: 100%; font-size: 17px; padding: 10px 20px; margin: 10px 0px; word-break: break-word; white-space: normal; text-align: center; justify-content: center;"]
 
 
-! pronhub 
+! pornhub 
 cn.pornhub.com##.js_videoSubscribeButton
 cn.pornhub.com##.ph-icon-user-circle
 cn.pornhub.com##.js-mainFooter
@@ -110,22 +110,14 @@ hanime1.me###mobile-ad
 hanime1.me###watch-footer
 hanime1.me###user-modal-trigger
 
-! TOS
-@@game.omg.com.tw##.width-1
-@@game.omg.com.tw##.btn.btn-5.size-full.LoginBtn
-game.omg.com.tw##.function-box-pc.fub-open
-game.omg.com.tw##.col-link.text-c
-game.omg.com.tw##.font-s.line-h-2.text-c
-game.omg.com.tw##.icon_f
-game.omg.com.tw##.blank
 
 ! BC&Lowy
-forgetfulbc.blogspot.com##a[target="_blank"]:remove()
-forgetfulbc.blogspot.com##div[style="text-align: center;"]
-forgetfulbc.blogspot.com##.embed-container
-forgetfulbc.blogspot.com##div.separator
-forgetfulbc.blogspot.com##div.embed-container
-forgetfulbc.blogspot.com##span[style="color: #660000;"]
+! forgetfulbc.blogspot.com##a[target="_blank"]:remove()
+! forgetfulbc.blogspot.com##div[style="text-align: center;"]
+! forgetfulbc.blogspot.com##.embed-container
+! forgetfulbc.blogspot.com##div.separator
+! forgetfulbc.blogspot.com##div.embed-container
+! forgetfulbc.blogspot.com##span[style="color: #660000;"]
 
 ! Yahoo新聞
 tw.news.yahoo.com##.article-challenge-container
@@ -144,7 +136,7 @@ qidian.com##._wrapper_131ir_193
 qidian.com##.chapter-end-qrcode
 
 ! Dcard
-dcard.tw##.atm_cs_12oz46p.atm_c8_eai3rd.atm_g3_xy5hu5.atm_7l_1o85cey.atm_l8_qnkx.m1ch8o4s
+dcard.tw##.atm_cs_12oz46p.atm_c8_eai3rd.atm_g3_xy5hu5.atm_7l_1o85cey  .atm_l8_qnkx.m1ch8o4s
 dcard.tw##.atm_26_b78cep.atm_mk_h2mmj6.atm_9s_1txwivl.atm_fc_1h6ojuz.atm_l8_p2tquy.a11dsnn
 
 ! 鏈新聞
