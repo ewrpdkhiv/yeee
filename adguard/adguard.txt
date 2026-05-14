@@ -1,313 +1,377 @@
 ! Title: Private Filter
-! Version: 2026-04-03
+! Version: 2026-05-14
 ! Expires: 1 hour
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
 
+! ==================== URL 參數清理 ====================
+
+! momo 購物網（移除追蹤與推薦來源參數）
+||momoshop.com.tw^$removeparam=Area   ! 區域來源參數
+||momoshop.com.tw^$removeparam=mdiv   ! 行銷區塊參數
+||momoshop.com.tw^$removeparam=oid    ! 訂單/來源 ID
+||momoshop.com.tw^$removeparam=cid    ! 活動/頻道 ID
+||momoshop.com.tw^$removeparam=kw     ! 關鍵字來源參數
+
+! Google Maps（移除導流與入口追蹤參數）
+||google.com/maps^$removeparam=g_ep   ! Google 導流實驗參數
+||google.com/maps^$removeparam=entry  ! 入口來源參數
+
+
+! ==================== 小說 / 閱讀平台 ====================
+
 ! 69書吧
-69shuba.com##li.col-4
-69shuba.com##li#games_ads
-69shuba.com##.yuedutuijian
-69shuba.com###pagefootermenu
-69shuba.com###jubao
+69shuba.com##li.col-4                  ! 側邊欄格狀廣告
+69shuba.com##li#games_ads              ! 遊戲廣告
+69shuba.com##.yuedutuijian             ! 閱讀推薦區塊
+69shuba.com###pagefootermenu           ! 頁尾選單
+69shuba.com###jubao                    ! 舉報按鈕
 
 ! 69story
-69story.com###banner25
-69story.com###banner55
-69story.com###bkat
+69story.com###banner25                 ! 橫幅廣告（25號）
+69story.com###banner55                 ! 橫幅廣告（55號）
+69story.com###bkat                     ! 廣告區塊
 
 ! 天天看小說
-bg3.co##.footer_frame
-bg3.co##.div_feedback
-bg3.co##.more_recommend
-bg3.co##.social_share_frame
+bg3.co##.footer_frame                  ! 頁尾框架
+bg3.co##.div_feedback                  ! 意見回饋區塊
+bg3.co##.more_recommend                ! 更多推薦區塊
+bg3.co##.social_share_frame            ! 社群分享框架
 
 ! 思兔閱讀
-sto520.com##.div_ads_label
+sto520.com##.div_ads_label             ! 廣告標籤區塊
+
+! 台灣小說網
+m.xsw.tw##.back                        ! 返回按鈕（干擾閱讀）
+
+! 起點中文網
+qidian.com##.review                    ! 書評區塊
+qidian.com###r-authorSay               ! 作者說區塊
+qidian.com##._wrapper_131ir_193        ! 特定包裝區塊（通常為推廣）
+qidian.com##.chapter-end-qrcode        ! 章末 QR Code（推廣）
+
+
+! ==================== 成人內容平台 ====================
 
 ! xvideos
-xvideos.com##.icf-pencil
-xvideos.com##.thread-node-metadata
-xvideos.com##.botLinks
-! www.xvideos.com##div[style^="display: flex; background: rgb(222, 38, 0);"]
+xvideos.com##.icf-pencil               ! 編輯圖示按鈕
+xvideos.com##.thread-node-metadata     ! 討論串元資料
+xvideos.com##.botLinks                 ! 底部連結列
+! 以下為特定樣式的警告橫幅（已精確比對 style 屬性）
 xvideos.com##div[style="display: flex; background: rgb(222, 38, 0); color: rgb(255, 255, 255); width: 100%; font-size: 17px; padding: 10px 20px; margin: 10px 0px; word-break: break-word; white-space: normal; text-align: center; justify-content: center;"]
 
-
-! pornhub 
-cn.pornhub.com##.js_videoSubscribeButton
-cn.pornhub.com##.ph-icon-user-circle
-cn.pornhub.com##.js-mainFooter
-cn.pornhub.com##.js-noRedirect
-cn.pornhub.com###flagVideoBtn
-cn.pornhub.com###playlistModal
-cn.pornhub.com###js-likedVideosTooltip
-cn.pornhub.com##i.ph-icon-flag
-cn.pornhub.com##h3.heading1
-cn.pornhub.com##div.rtaDisclaimerWrapper
+! Pornhub（中文版）
+cn.pornhub.com##.js_videoSubscribeButton   ! 訂閱按鈕
+cn.pornhub.com##.ph-icon-user-circle       ! 使用者頭像圖示
+cn.pornhub.com##.js-mainFooter             ! 主要頁尾
+cn.pornhub.com##.js-noRedirect             ! 防跳轉提示
+cn.pornhub.com###flagVideoBtn              ! 檢舉影片按鈕
+cn.pornhub.com###playlistModal             ! 播放清單彈窗
+cn.pornhub.com###js-likedVideosTooltip     ! 喜歡影片提示
+cn.pornhub.com##i.ph-icon-flag             ! 旗標圖示
+cn.pornhub.com##h3.heading1                ! 頁面標題（廣告性質）
+cn.pornhub.com##div.rtaDisclaimerWrapper   ! 年齡確認聲明框
 
 ! 18H漫畫
-18h.mm-cg.com##.ut1_img_ex_content
-18h.mm-cg.com##.footer_main
-18h.mm-cg.com##.ut1_img_content_js
-18h.mm-cg.com##.animenu__nav
-18h.mm-cg.com##.di_img
-18h.mm-cg.com##.div_adhost
-18h.mm-cg.com##.rand_list
-18h.mm-cg.com##img[border="0"][width="1000px"]
-18h.mm-cg.com##span[class="redbig"]
-18h.mm-cg.com##font[size="5"][color="#B00000"]
-18h.mm-cg.com##img[border="0"][width="500"][height="200"]
-18h.mm-cg.com##span[style="font-size:20px;color:#B00000;"]
-18h.mm-cg.com##span[style="font-size:20px;"]
-18h.mm-cg.com##div[id="phCG_OnOff"]
-18h.mm-cg.com##div[class="Bypass_sp"]
+18h.mm-cg.com##.ut1_img_ex_content         ! 擴充圖片廣告內容
+18h.mm-cg.com##.footer_main                ! 主頁尾
+18h.mm-cg.com##.ut1_img_content_js         ! JS 圖片廣告內容
+18h.mm-cg.com##.animenu__nav               ! 動畫選單導覽列
+18h.mm-cg.com##.di_img                     ! 廣告圖片
+18h.mm-cg.com##.div_adhost                 ! 廣告主容器
+18h.mm-cg.com##.rand_list                  ! 隨機推薦清單
+18h.mm-cg.com##img[border="0"][width="1000px"]               ! 寬版廣告圖
+18h.mm-cg.com##span[class="redbig"]                         ! 紅色大字廣告文字
+18h.mm-cg.com##font[size="5"][color="#B00000"]               ! 深紅色廣告字體
+18h.mm-cg.com##img[border="0"][width="500"][height="200"]    ! 500×200 廣告圖
+18h.mm-cg.com##span[style="font-size:20px;color:#B00000;"]  ! 紅色大字 span
+18h.mm-cg.com##span[style="font-size:20px;"]                ! 大字 span
+18h.mm-cg.com##div[id="phCG_OnOff"]        ! 特定廣告開關 div
+18h.mm-cg.com##div[class="Bypass_sp"]      ! 繞過提示 div
 
-! 汙汙漫畫
-www.comicbox.xyz##.list_recommend3
-www.comicbox.xyz##.active
-www.comicbox.xyz##.iframe-block-mobileChapterTop
-www.comicbox.xyz##.detail-comment-fix-bottom
-www.comicbox.xyz##.global-navbar
-www.comicbox.xyz##.CarouselView center
-www.comicbox.xyz##.under-top-bar
-www.comicbox.xyz##.inner
-www.comicbox.xyz##.innerBottom
-www.comicbox.xyz##section.mod-recommend3 > h2
-www.comicbox.xyz###img_banner_77_2
-www.comicbox.xyz###btn_toolFav
-www.comicbox.xyz###comment
-www.comicbox.xyz##.wrapper
-www.55comic.com##.wrapper
-##.bannerImg
-##.global-navbar
-##.footer-box
-##.note-top
-##.detail-comment-fix-bottom
-##.friendship
-##.games
+! 汙汙漫畫（comicbox / 55comic）
+www.comicbox.xyz##.list_recommend3                  ! 推薦列表
+www.comicbox.xyz##.active                           ! 當前啟用廣告區塊
+www.comicbox.xyz##.iframe-block-mobileChapterTop    ! 行動版章節頂部 iframe 廣告
+www.comicbox.xyz##.detail-comment-fix-bottom        ! 底部固定評論區
+www.comicbox.xyz##.global-navbar                    ! 全域導覽列
+www.comicbox.xyz##.CarouselView center              ! 輪播廣告中心
+www.comicbox.xyz##.under-top-bar                    ! 頂部欄下方廣告
+www.comicbox.xyz##.inner                            ! 內部廣告容器
+www.comicbox.xyz##.innerBottom                      ! 底部內部廣告
+www.comicbox.xyz##section.mod-recommend3 > h2       ! 推薦區塊標題
+www.comicbox.xyz###img_banner_77_2                  ! 特定橫幅廣告圖
+www.comicbox.xyz###btn_toolFav                      ! 收藏工具按鈕
+www.comicbox.xyz###comment                          ! 評論區塊
+www.comicbox.xyz##.wrapper                          ! 外層包裝（含廣告）
+www.55comic.com##.wrapper                           ! 同上（55comic 域名）
+! 以下為跨站通用規則（對所有網站生效）
+##.bannerImg                                        ! 橫幅廣告圖
+##.global-navbar                                    ! 全域導覽列
+##.footer-box                                       ! 頁尾框
+##.note-top                                         ! 頂部提示
+##.detail-comment-fix-bottom                        ! 底部固定評論區
+##.friendship                                       ! 友情連結
+##.games                                            ! 遊戲廣告
 
-! 18comic
-18comic.vip##.a35c7-1_4_sticky2
-18comic.vip##.top-nav
-18comic.vip##a.meun-video
-18comic.vip###sns
-18comic.vip##a.meun-game
-18comic.vip##.btn.btn-primary
-18comic.vip##.fas.fa-store-alt
-18comic.vip##.fas.fa-user-circle
-18comic.vip##div.hidden-lg
-18comic.vip###billboard-modal
-
+! 18comic（禁漫天堂）
+18comic.vip##.a35c7-1_4_sticky2        ! 黏性廣告浮層
+18comic.vip##.top-nav                  ! 頂部導覽列
+18comic.vip##a.meun-video              ! 選單影片連結
+18comic.vip###sns                      ! 社群分享區塊
+18comic.vip##a.meun-game               ! 選單遊戲連結
+18comic.vip##.btn.btn-primary          ! 主要按鈕（推廣）
+18comic.vip##.fas.fa-store-alt         ! 商店圖示
+18comic.vip##.fas.fa-user-circle       ! 使用者圖示
+18comic.vip##div.hidden-lg             ! 行動版隱藏的廣告 div
+18comic.vip###billboard-modal          ! 告示板彈窗
 
 ! 愛薇兒
-avcome.com###iframepage
-avcome.com##table[bgcolor="#800000"]
-avcome.com##td[valign="top"][colspan="5"]
-avcome.com##img[border="0"][height="230"][width="800"]
+avcome.com###iframepage                              ! iframe 廣告頁
+avcome.com##table[bgcolor="#800000"]                 ! 深紅背景廣告表格
+avcome.com##td[valign="top"][colspan="5"]            ! 跨欄廣告儲存格
+avcome.com##img[border="0"][height="230"][width="800"] ! 橫幅廣告圖
 
 ! hanime1
-hanime1.me###mobile-ad
-hanime1.me###watch-footer
-hanime1.me###user-modal-trigger
+hanime1.me###mobile-ad                 ! 行動版廣告
+hanime1.me###watch-footer              ! 播放頁頁尾
+hanime1.me###user-modal-trigger        ! 使用者登入彈窗觸發器
+
+! 18av
+18av.mm-cg.com##.ut1_img_ex_content   ! 擴充圖片廣告內容（同 18h）
 
 
-! BC&Lowy
+! ==================== 新聞 / 媒體平台 ====================
+
+! Yahoo 新聞（台灣）
+tw.news.yahoo.com##.article-challenge-container    ! 文章驗證容器
+tw.news.yahoo.com###popover-wrapper                ! 彈出視窗包裝
+tw.news.yahoo.com##button.follow-button.non-loggedin ! 未登入追蹤按鈕
+tw.news.yahoo.com##div.gam-placeholder.sdaLite_D(n) ! GAM 廣告佔位
+tw.news.yahoo.com###postArticle                    ! 文章後廣告區塊
+
+! 鏈新聞（abmedia）
+abmedia.io##span                                   ! 廣告 span 元素
+abmedia.io##.wp-block-groupinner-container         ! 區塊廣告容器
+abmedia.io###pum-47873                             ! 特定彈窗（ID 47873）
+
+! 爆料公社
+web.bc3ts.net##div.card.PostCommentCard_commentAddWrapperIKgXd  ! 新增留言卡片
+web.bc3ts.net##div.OpenApp_rootGNltP.OpenApp_rootWithFooterComment6i0hB ! 開啟 App 提示
+
+! 經濟日報
+money.udn.com##div.aside-actvity       ! 側邊活動廣告
+money.udn.com##div.notice-mask         ! 通知遮罩層
+money.udn.com###threemin               ! 三分鐘短影音區塊
+money.udn.com##div.noticeBox           ! 通知框
+money.udn.com##div.breaking-news       ! 即時新聞橫幅
+money.udn.com##div.appbanner           ! App 下載橫幅
+
+! udn 新聞
+udn.com##.social-wrapper               ! 社群分享列
+udn.com##.article-content__ads--bd     ! 文章內廣告
+udn.com##.discuss-board                ! 討論版區塊
+udn.com##.ec-section                   ! 電商推薦區塊
+udn.com##.facebook-comment             ! Facebook 留言區
+udn.com##.audio-player                 ! 音訊播放器
+udn.com##.breaking-news__wrapper       ! 即時新聞包裝
+
+! 今周刊財富網
+wealth.businessweekly.com.tw###_popIn_recommend ! 推薦彈入廣告
+
+! 商業周刊 / 經理人
+managertoday.com.tw##img.w-12.sm       ! 小型廣告圖示
+businesstoday.com.tw###showNext        ! 下一篇推薦按鈕（強制翻頁）
+
+! 風傳媒
+storm.mg##.lineCommunity               ! LINE 社群推廣
+storm.mg###stock_bar_inner             ! 股市橫幅
+
+! ETtoday 財經
+finance.ettoday.net###adsense_matched_content_2 ! Google 比對內容廣告
+finance.ettoday.net##div.iframe-ad     ! iframe 廣告
+
+! ETtoday 健康
+health.ettoday.net##div.iframe-ad      ! iframe 廣告
+
+! 三立新聞
+setn.com##div.wrapper > div.video-container ! 影音廣告容器
+
+
+! ==================== 社群平台 ====================
+
+! Dcard
+dcard.tw##.atm_cs_12oz46p.atm_c8_eai3rd.atm_g3_xy5hu5.atm_7l_1o85cey.atm_l8_qnkx.m1ch8o4s  ! 特定廣告元素（混淆 class）
+dcard.tw##.atm_26_b78cep.atm_mk_h2mmj6.atm_9s_1txwivl.atm_fc_1h6ojuz.atm_l8_p2tquy.a11dsnn  ! 特定廣告元素（混淆 class）
+
+! Facebook 行動版（m.facebook.com）
+! 登入提示彈窗（modal）
+m.facebook.com##div[role="dialog"][aria-modal="true"]:has(a[href*="/login/"], a[href*="/reg/"]):upward(div.fixed-container)
+! 頂部登入工具列
+m.facebook.com##div.fixed-container.top:has([role="button"][aria-label*="登入"i], [role="button"][aria-label*="Log In"i], a[href*="/login/"])
+! 解除 body 的 overflow 鎖定（避免無法滾動頁面）
+m.facebook.com##body:remove-class(prevent-scrolling)
+m.facebook.com##html, body:style(overflow: auto !important; scroll-behavior: auto !important;)
+
+! Medium
+medium.com##input[placeholder="Enter your email"]:upward(5)  ! 文章中間訂閱 Email 彈出框
+medium.com##button[aria-label="responses"]:upward(6)         ! 底部固定的讚數與留言列
+medium.com##input[aria-label="search"]:upward(5)             ! 頂部固定的標題與 Medium 導覽列
+
+
+! ==================== 學習 / 開發平台 ====================
+
+! CSDN 博客
+blog.csdn.net##div.passport-login-tip-container.false  ! 登入提示容器
+blog.csdn.net##div.passport-login-container            ! 登入彈窗
+blog.csdn.net##button.btn-code-notes.mdeditor          ! Markdown 編輯器筆記按鈕
+blog.csdn.net##div.csdn-side-toolbar                   ! 側邊工具列
+blog.csdn.net##.left-toolbox                           ! 左側工具箱
+blog.csdn.net###operate                                ! 操作按鈕區
+blog.csdn.net##div[data-title="登录复制"]              ! 「登入後複製」提示
+blog.csdn.net##.code-run-btn                           ! 程式碼執行按鈕
+blog.csdn.net##.swiper-slide-box-remuneration          ! 付費推廣輪播
+blog.csdn.net##.profile-intro-name-boxOpration         ! 作者資訊操作區
+blog.csdn.net###toolbarBox                             ! 工具列容器
+blog.csdn.net###pcCommentBox                           ! PC 版評論框
+blog.csdn.net##.btn-code-notes                         ! 程式碼筆記按鈕
+
+! 稀土掘金（juejin）
+juejin.cn##.open-button.app-open-button        ! 開啟 App 按鈕
+juejin.cn##.action-box-wrap.action-bar         ! 互動按鈕列
+juejin.cn##.byte-drawer__mask                  ! 抽屜遮罩
+juejin.cn##.byte-drawer__wrapper               ! 抽屜容器
+juejin.cn##.suspension-panel                   ! 懸浮面板
+juejin.cn##.article-suspended-panel.dynamic-data-ready ! 文章懸浮互動面板
+juejin.cn##.ad-container                       ! 廣告容器
+juejin.cn##.code-block-extension-headerRight   ! 程式碼區塊右側擴充按鈕
+juejin.cn##.comment-login-guide:upward(3)      ! 評論區登入引導（含父層）
+juejin.cn##.ai-assistant-notification.ai-assistant-transition ! AI 助手通知
+
+! codelove（台灣）
+codelove.tw##.sticky-top                       ! 頂部黏性廣告
+codelove.tw##.alert.alert-success.mb-0.text-center.alert-edm.fixed-bottom ! 底部固定 EDM 通知
+codelove.tw##.container.mt-5                   ! 特定廣告容器
+codelove.tw##.nice-container                   ! 推廣內容容器
+codelove.tw##.alert.alert-secondary.my-0       ! 次要提示橫幅
+codelove.tw###edmModal                         ! EDM 訂閱彈窗
+codelove.tw##div[class="_bg-white rounded _border p-3 shopify-service-card"] ! Shopify 服務推廣卡
+
+! 六角學院
+www.hexschool.com###footerContact              ! 頁尾聯絡資訊
+www.hexschool.com###nav                        ! 導覽列
+www.hexschool.com##.navbar-fixed-bottom        ! 底部固定導覽列
+www.hexschool.com##.footer                     ! 頁尾
+! 六角課程平台（影片左側 sidebar 無法縮小，直接移除）
+courses.hexschool.com###courseSidebar          ! 課程側邊欄
+
+! 百度開發者
+developer.baidu.com##div.content-container     ! 內容容器（廣告性質）
+
+! 騰訊雲
+cloud.tencent.com###ask-detail-content-product-container ! 問答頁產品推薦容器
+
+! 素朴（sspai）
+sspai.com###btn-call-app                       ! 呼叫 App 按鈕
+
+! AmazingTalker
+amazingtalker.com##form[role="search"]:upward(5)           ! 右側搜尋推薦欄
+amazingtalker.com###site-header                            ! 頂部 navbar
+amazingtalker.com##.elementor-author-box__name:upward(12)  ! 下方推薦導師區塊
+amazingtalker.com##a.elementor-post__read-more:upward(4)   ! 下方推薦文章區塊
+amazingtalker.com##div.elementor-location-footer           ! 頁尾
+
+! Vocus（方格子）
+vocus.cc##.icon-search:upward(5)                           ! 頂部 navbar
+vocus.cc##div[data-infinity-roll-role="fixed-reader-title"] ! 底部固定閱讀標題列
+
+! Udemy
+udemy.com##div[data-purpose="video-sneak-peek-container"]  ! 影片預覽容器（付費牆）
+
+! 騰訊新聞
+view.inews.qq.com##.normal_padding__gVUr8      ! 特定內容間距容器
+
+! OpenAtom / CSDN Workshop
+openatomworkshop.csdn.net##div.user-desc.user-desc-fix ! 使用者描述固定區塊
+
+
+! ==================== YouTube ====================
+
+! 首頁：隱藏 Shorts 區塊
+youtube.com##[is-shorts]
+! 側邊選單：隱藏 Shorts 按鈕
+www.youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
+! 搜尋結果：隱藏 Shorts 影片
+www.youtube.com##ytd-search ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-video-renderer)
+! 搜尋與頻道頁：隱藏 Shorts 區塊列
+www.youtube.com##ytd-reel-shelf-renderer
+! 頻道頁：隱藏 Shorts 分頁標籤
+www.youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:nth-of-type(3):has-text(Shorts)
+! 訂閱頁（格狀）：隱藏 Shorts
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer [overlay-style="SHORTS"]:upward(ytd-grid-video-renderer)
+! 訂閱頁（清單）：隱藏 Shorts
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-item-section-renderer)
+! 訂閱頁（新版面）：隱藏 Shorts
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer [overlay-style="SHORTS"]:upward(ytd-rich-item-renderer)
+! 側邊推薦：隱藏 Shorts
+www.youtube.com###related ytd-compact-video-renderer [overlay-style="SHORTS"]:upward(ytd-compact-video-renderer)
+! Shorts 元資料面板
+youtube.com##yt-reel-metapanel-view-model.ytReelMetapanelViewModelHost
+! 行動版：隱藏底部 Shorts 選單按鈕
+m.youtube.com##.pivot-shorts:upward(ytm-pivot-bar-item-renderer)
+! 行動版：隱藏 Shorts 區塊
+m.youtube.com##ytm-reel-shelf-renderer
+! 行動版：隱藏搜尋中的 Shorts
+m.youtube.com##ytm-search ytm-video-with-context-renderer [data-style="SHORTS"]
+
+
+! ==================== 其他 / 跨站 ====================
+
+##.SearchBar-input:upward(8)            ! 搜尋框（含父層 8 層）
+##.ContentItem-actions                  ! 內容項目操作列（知乎等平台）
+
+! 哈米點（中華電信）
+hamipoint.cht.com.tw##.advbox          ! 廣告框
+
+! 海外股市（histock）
+histock.tw###fullsiteAD                ! 全站廣告
+
+! 巴哈姆特
+home.gamer.com.tw##div.image-status-bar ! 圖片狀態欄
+
+! 8591 寶物交易（行動版）
+m.8591.com.tw##a.account-bn.flex.align-center ! 帳號橫幅連結
+m.8591.com.tw##div.van-overlay         ! 遮罩層
+m.8591.com.tw##.list-banner            ! 清單橫幅廣告
+
+! Mobile01（行動版）
+m.mobile01.com###fancybox-container-1  ! Fancybox 彈窗容器
+
+! 快點飲食外送
+eats.quickclick.cc##.notify_fixed.ad_bottom0 ! 底部固定廣告通知
+
+! 台灣財經圖表
+tw.chartoo.com###eq > div.mr           ! 特定廣告 div
+
+! 知乎
+zhihu.com##footer[role="contentinfo"]  ! 頁尾資訊
+zhihu.com##.ContentItem-actions.Sticky.RichContent-actions.is-fixed.is-bottom ! 底部固定操作列
+
+! 萌娘百科（中文）
+zh.moegirl.org.cn###moe-open-in-app   ! 開啟 App 提示
+
+! Treemi9 Blogspot
+treemi9.blogspot.com###HTML1           ! 特定 HTML 小工具
+
+! Aion2 攻略站（bnshive）
+aion2.bnshive.com##div[data-v-0956323b]          ! Vue 元件廣告區塊
+aion2.bnshive.com##.absolute.-top-9.right-0      ! 右上角浮動廣告
+aion2.bnshive.com##[data-sidebar="group"][class*="pt-0"] ! 側邊欄廣告群組
+
+! BC&Lowy（已停用，保留供參考）
 ! forgetfulbc.blogspot.com##a[target="_blank"]:remove()
 ! forgetfulbc.blogspot.com##div[style="text-align: center;"]
 ! forgetfulbc.blogspot.com##.embed-container
 ! forgetfulbc.blogspot.com##div.separator
 ! forgetfulbc.blogspot.com##div.embed-container
 ! forgetfulbc.blogspot.com##span[style="color: #660000;"]
-
-! Yahoo新聞
-tw.news.yahoo.com##.article-challenge-container
-tw.news.yahoo.com###popover-wrapper
-tw.news.yahoo.com##button.follow-button.non-loggedin
-tw.news.yahoo.com##div.gam-placeholder.sdaLite_D(n)
-tw.news.yahoo.com###postArticle
-
-! 台灣小說網
-m.xsw.tw##.back
-
-! 起點
-qidian.com##.review
-qidian.com###r-authorSay
-qidian.com##._wrapper_131ir_193
-qidian.com##.chapter-end-qrcode
-
-! Dcard
-dcard.tw##.atm_cs_12oz46p.atm_c8_eai3rd.atm_g3_xy5hu5.atm_7l_1o85cey  .atm_l8_qnkx.m1ch8o4s
-dcard.tw##.atm_26_b78cep.atm_mk_h2mmj6.atm_9s_1txwivl.atm_fc_1h6ojuz.atm_l8_p2tquy.a11dsnn
-
-! 鏈新聞
-abmedia.io##span
-abmedia.io##.wp-block-groupinner-container
-
-! 爆料公社
-web.bc3ts.net##div.card.PostCommentCard_commentAddWrapperIKgXd
-web.bc3ts.net##div.OpenApp_rootGNltP.OpenApp_rootWithFooterComment6i0hB
-
-! 經濟日報
-money.udn.com##div.aside-actvity
-money.udn.com##div.notice-mask
-money.udn.com###threemin
-money.udn.com##div.noticeBox
-money.udn.com##div.breaking-news
-money.udn.com##div.appbanner
-
-! udn新聞
-udn.com##.social-wrapper
-udn.com##.article-content__ads--bd
-udn.com##.discuss-board
-udn.com##.ec-section
-udn.com##.facebook-comment
-udn.com##.audio-player
-udn.com##.breaking-news__wrapper
-
-
-! CSDN博客
-blog.csdn.net##div.passport-login-tip-container.false
-blog.csdn.net##div.passport-login-container
-blog.csdn.net##button.btn-code-notes.mdeditor
-blog.csdn.net##div.csdn-side-toolbar
-blog.csdn.net##.left-toolbox
-blog.csdn.net###operate
-blog.csdn.net##div[data-title="登录复制"]
-blog.csdn.net##.code-run-btn
-blog.csdn.net##.swiper-slide-box-remuneration
-blog.csdn.net##.profile-intro-name-boxOpration
-blog.csdn.net###toolbarBox
-blog.csdn.net###pcCommentBox
-blog.csdn.net##.btn-code-notes
-
-! codelove
-codelove.tw##.sticky-top
-codelove.tw##.alert.alert-success.mb-0.text-center.alert-edm.fixed-bottom
-codelove.tw##.container.mt-5
-codelove.tw##.nice-container
-codelove.tw##.alert.alert-secondary.my-0
-codelove.tw###edmModal
-codelove.tw##div[class="_bg-white rounded _border p-3 shopify-service-card"]
-
-! 六角
-www.hexschool.com###footerContact
-www.hexschool.com###nav
-www.hexschool.com##.navbar-fixed-bottom
-www.hexschool.com##.footer
-
-! medium
-! 文章中間要你輸入email的視窗
-medium.com##input[placeholder="Enter your email"]:upward(5)
-! 下方顯示讚數與留言的footer(視窗往下移動仍會佔版面)
-medium.com##button[aria-label="responses"]:upward(6)
-! 上方標題與medium的head(視窗往下移動仍會佔版面)
-medium.com##input[aria-label="search"]:upward(5)
-
-! amazingtalker
-! 右側推薦欄
-amazingtalker.com##form[role="search"]:upward(5)
-! 頂部navbar
-amazingtalker.com###site-header
-! 下方推薦導師
-amazingtalker.com##.elementor-author-box__name:upward(12)
-! 下方其他推薦文章
-amazingtalker.com##a.elementor-post__read-more:upward(4)
-! footer
-amazingtalker.com##div.elementor-location-footer
-
-! vocus
-! 上方navbar
-vocus.cc##.icon-search:upward(5)
-! 下方
-vocus.cc##div[data-infinity-roll-role="fixed-reader-title"]
-
-! 稀土掘金
-juejin.cn##.open-button.app-open-button
-juejin.cn##.action-box-wrap.action-bar
-juejin.cn##.byte-drawer__mask
-juejin.cn##.byte-drawer__wrapper
-juejin.cn##.suspension-panel
-juejin.cn##.article-suspended-panel.dynamic-data-ready
-juejin.cn##.ad-container
-juejin.cn##.code-block-extension-headerRight
-juejin.cn##.comment-login-guide:upward(3)
-
-! YouTube Shorts
-! YT Homepage - Hide the Shorts section
-youtube.com##[is-shorts]
-! YT Menu - Hide the Shorts button
-www.youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
-! YT Search - Hide Shorts
-www.youtube.com##ytd-search ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-video-renderer)
-! YT Search and Channels - Hide the Shorts sections
-www.youtube.com##ytd-reel-shelf-renderer
-! YT Channels - Hide the Shorts tab
-www.youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:nth-of-type(3):has-text(Shorts)
-! YT Subscriptions - Hide Shorts - Grid View
-www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer [overlay-style="SHORTS"]:upward(ytd-grid-video-renderer)
-! YT Subscriptions - Hide Shorts - List View
-www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-item-section-renderer)
-! YT Subscriptions - New Layout - Hide Shorts
-www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer [overlay-style="SHORTS"]:upward(ytd-rich-item-renderer)
-! YT Sidebar - Hide Shorts
-www.youtube.com###related ytd-compact-video-renderer [overlay-style="SHORTS"]:upward(ytd-compact-video-renderer)
-! YT Mobile - Hide the Shorts Menu button
-m.youtube.com##.pivot-shorts:upward(ytm-pivot-bar-item-renderer)
-! YT Mobile - Hide Shorts sections
-m.youtube.com##ytm-reel-shelf-renderer
-! YT Mobile - Hide Shorts in search results
-m.youtube.com##ytm-search ytm-video-with-context-renderer [data-style="SHORTS"]
-
-
-! Facebook 行動版網頁規則: 
-! (AdGuard | uBlock Origin)
-! 登入提示彈窗（modal）
-m.facebook.com##div[role="dialog"][aria-modal="true"]:has(a[href*="/login/"], a[href*="/reg/"]):upward(div.fixed-container)
-! 頂部登入工具列
-m.facebook.com##div.fixed-container.top:has([role="button"][aria-label*="登入"i], [role="button"][aria-label*="Log In"i], a[href*="/login/"])
-! 避免無法滾動
-m.facebook.com##body:remove-class(prevent-scrolling)
-m.facebook.com##html, body:style(overflow: auto !important; scroll-behavior: auto !important;)
-
-
-! 其他
-##.SearchBar-input:upward(8)
-##.ContentItem-actions
-18av.mm-cg.com##.ut1_img_ex_content
-abmedia.io###pum-47873
-businesstoday.com.tw###showNext
-cloud.tencent.com###ask-detail-content-product-container
-! 六角影片左邊sidebar無法縮小只好刪除
-courses.hexschool.com###courseSidebar
-developer.baidu.com##div.content-container
-eats.quickclick.cc##.notify_fixed.ad_bottom0
-finance.ettoday.net###adsense_matched_content_2
-finance.ettoday.net##div.iframe-ad
-hamipoint.cht.com.tw##.advbox
-health.ettoday.net##div.iframe-ad
-histock.tw###fullsiteAD
-home.gamer.com.tw##div.image-status-bar
-juejin.cn##.ai-assistant-notification.ai-assistant-transition
-m.8591.com.tw##a.account-bn.flex.align-center
-m.8591.com.tw##div.van-overlay
-m.8591.com.tw##.list-banner
-m.mobile01.com###fancybox-container-1
-m.happymh.com##article.jss29
-m.happymh.com##div.jss7
-managertoday.com.tw##img.w-12.sm
-openatomworkshop.csdn.net##div.user-desc.user-desc-fix
-storm.mg##.lineCommunity
-sspai.com###btn-call-app
-storm.mg###stock_bar_inner
-setn.com##div.wrapper > div.video-container
-treemi9.blogspot.com###HTML1
-tw.chartoo.com###eq > div.mr
-udemy.com##div[data-purpose="video-sneak-peek-container"]
-view.inews.qq.com##.normal_padding__gVUr8
-wealth.businessweekly.com.tw###_popIn_recommend
-youtube.com##yt-reel-metapanel-view-model.ytReelMetapanelViewModelHost
-zhihu.com##footer[role="contentinfo"]
-zhihu.com##.ContentItem-actions.Sticky.RichContent-actions.is-fixed.is-bottom
-zh.moegirl.org.cn###moe-open-in-app
-
-
