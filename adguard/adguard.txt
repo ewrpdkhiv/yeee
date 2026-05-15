@@ -205,8 +205,7 @@ setn.com##div.wrapper > div.video-container ! 影音廣告容器
 ! ==================== 社群平台 ====================
 
 ! Dcard
-dcard.tw##.atm_cs_12oz46p.atm_c8_eai3rd.atm_g3_xy5hu5.atm_7l_1o85cey.atm_l8_qnkx.m1ch8o4s  ! 特定廣告元素（混淆 class）
-dcard.tw##.atm_26_b78cep.atm_mk_h2mmj6.atm_9s_1txwivl.atm_fc_1h6ojuz.atm_l8_p2tquy.a11dsnn  ! 特定廣告元素（混淆 class）
+dcard.tw##div.__portal     ! 登入／註冊彈窗容器（Portal 掛載層）
 
 ! Facebook 行動版（m.facebook.com）
 ! 登入提示彈窗（modal）
