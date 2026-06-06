@@ -1,6 +1,3 @@
-以下是移除所有行內註解後的過濾清單：
-
-```
 ! Title: Private Filter
 ! Version: 2026-06-06
 ! Expires: 1 hour
@@ -360,4 +357,3 @@ aion2.bnshive.com##[data-sidebar="group"][class*="pt-0"]
 ! forgetfulbc.blogspot.com##div.separator
 ! forgetfulbc.blogspot.com##div.embed-container
 ! forgetfulbc.blogspot.com##span[style="color: #660000;"]
-```
