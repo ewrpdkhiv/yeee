@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026-06-06
+! Version: 2026-06-07
 ! Expires: 1 hour
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -87,7 +87,7 @@ cn.pornhub.com##div.rtaDisclaimerWrapper
 18h.mm-cg.com##div[class="Bypass_sp"]
 18h.mm-cg.com##.content.video
 18h.mm-cg.com##.footer
-||*.gif^
+||18h.mm-cg.com/*.gif^
 ||ammcg.imgstream*.com/toy/
 
 ! 汙汙漫畫（comicbox / 55comic）
