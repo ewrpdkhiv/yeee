@@ -1,16 +1,17 @@
 ! Title: Private Filter
-! Version: 2026-06-07
+! Version: 2026-06-19
 ! Expires: 1 hour
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
 
 ! ==================== URL 參數清理 ====================
 
-||momoshop.com.tw^$removeparam=Area
-||momoshop.com.tw^$removeparam=mdiv
-||momoshop.com.tw^$removeparam=oid
-||momoshop.com.tw^$removeparam=cid
-||momoshop.com.tw^$removeparam=kw
+||momoshop.com.tw/goods/GoodsDetail.jsp$removeparam=Area
+||momoshop.com.tw/goods/GoodsDetail.jsp$removeparam=mdiv
+||momoshop.com.tw/goods/GoodsDetail.jsp$removeparam=oid
+||momoshop.com.tw/goods/GoodsDetail.jsp$removeparam=cid
+||momoshop.com.tw/goods/GoodsDetail.jsp$removeparam=kw
+||momoshop.com.tw/goods/GoodsDetail.jsp$removeparam=ecTagNos
 
 ||google.com/maps^$removeparam=g_ep
 ||google.com/maps^$removeparam=entry
