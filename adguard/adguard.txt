@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026-06-19
+! Version: 2026-06-19-1
 ! Expires: 1 hour
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -358,3 +358,8 @@ aion2.bnshive.com##[data-sidebar="group"][class*="pt-0"]
 ! forgetfulbc.blogspot.com##div.separator
 ! forgetfulbc.blogspot.com##div.embed-container
 ! forgetfulbc.blogspot.com##span[style="color: #660000;"]
+
+momoshop.com.tw###dvSmartAgent
+momoshop.com.tw###dvSmartAgentICON
+momoshop.com.tw###bt_A_020_01
+momoshop.com.tw##li.listAreaLi:has(.sponsor-tag)
