@@ -1,10 +1,10 @@
 ! Title: Private Filter
-! Version: 2026-06-19-1
+! Version: 2026-08-12
 ! Expires: 1 hour
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
 
-! ==================== URL 參數清理 ====================
+! ==================== URL 參數清理（跨站） ====================
 
 ||momoshop.com.tw/goods/GoodsDetail.jsp$removeparam=Area
 ||momoshop.com.tw/goods/GoodsDetail.jsp$removeparam=mdiv
@@ -15,6 +15,19 @@
 
 ||google.com/maps^$removeparam=g_ep
 ||google.com/maps^$removeparam=entry
+
+||google.com/search$removeparam=client
+||google.com/search$removeparam=hs
+||google.com/search$removeparam=channela
+
+
+! ==================== 電商 / 購物平台 ====================
+
+! momo 購物網
+momoshop.com.tw###dvSmartAgent
+momoshop.com.tw###dvSmartAgentICON
+momoshop.com.tw###bt_A_020_01
+momoshop.com.tw##li.listAreaLi:has(.sponsor-tag)
 
 
 ! ==================== 小說 / 閱讀平台 ====================
@@ -57,6 +70,8 @@ xvideos.com##.icf-pencil
 xvideos.com##.thread-node-metadata
 xvideos.com##.botLinks
 xvideos.com##div[style="display: flex; background: rgb(222, 38, 0); color: rgb(255, 255, 255); width: 100%; font-size: 17px; padding: 10px 20px; margin: 10px 0px; word-break: break-word; white-space: normal; text-align: center; justify-content: center;"]
+xvideos.com##.live_model_thumb.not-live:upward(3)
+xvideos.com###full-video-link-btn
 
 ! Pornhub（中文版）
 cn.pornhub.com##.js_videoSubscribeButton
@@ -198,6 +213,9 @@ health.ettoday.net##div.iframe-ad
 ! 三立新聞
 setn.com##div.wrapper > div.video-container
 
+! 自由時報（優分析／ltn 子網域）
+uto.ltn.com.tw###right
+
 
 ! ==================== 社群平台 ====================
 
@@ -214,6 +232,9 @@ m.facebook.com##html, body:style(overflow: auto !important; scroll-behavior: aut
 medium.com##input[placeholder="Enter your email"]:upward(5)
 medium.com##button[aria-label="responses"]:upward(6)
 medium.com##input[aria-label="search"]:upward(5)
+
+! Reddit
+www.reddit.com###left-sidebar-container
 
 
 ! ==================== 學習 / 開發平台 ====================
@@ -310,6 +331,7 @@ m.youtube.com##ytm-search ytm-video-with-context-renderer [data-style="SHORTS"]
 
 ! ==================== 其他 / 跨站 ====================
 
+! 全域規則
 ##.SearchBar-input:upward(8)
 ##.ContentItem-actions
 
@@ -351,6 +373,12 @@ aion2.bnshive.com##div[data-v-0956323b]
 aion2.bnshive.com##.absolute.-top-9.right-0
 aion2.bnshive.com##[data-sidebar="group"][class*="pt-0"]
 
+! spiritvalers
+spiritvalers.com##.svslot-sponsor-home
+
+
+! ==================== 已停用（保留供參考） ====================
+
 ! BC&Lowy（已停用，保留供參考）
 ! forgetfulbc.blogspot.com##a[target="_blank"]:remove()
 ! forgetfulbc.blogspot.com##div[style="text-align: center;"]
@@ -358,8 +386,3 @@ aion2.bnshive.com##[data-sidebar="group"][class*="pt-0"]
 ! forgetfulbc.blogspot.com##div.separator
 ! forgetfulbc.blogspot.com##div.embed-container
 ! forgetfulbc.blogspot.com##span[style="color: #660000;"]
-
-momoshop.com.tw###dvSmartAgent
-momoshop.com.tw###dvSmartAgentICON
-momoshop.com.tw###bt_A_020_01
-momoshop.com.tw##li.listAreaLi:has(.sponsor-tag)
