@@ -131,16 +131,7 @@ www.55comic.com##.wrapper
 ##.games
 
 ! 18comic（禁漫天堂）
-18comic.vip##.a35c7-1_4_sticky2
-18comic.vip##.top-nav
-18comic.vip##a.meun-video
-18comic.vip###sns
-18comic.vip##a.meun-game
-18comic.vip##.btn.btn-primary
-18comic.vip##.fas.fa-store-alt
-18comic.vip##.fas.fa-user-circle
-18comic.vip##div.hidden-lg
-18comic.vip###billboard-modal
+*.gif|$domain=18comic.vip
 
 ! 愛薇兒
 avcome.com###iframepage
