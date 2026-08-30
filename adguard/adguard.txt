@@ -1,6 +1,6 @@
 ! Title: Private Filter
-! Version: 2026-08-18
-! Expires: 1 hour
+! Version: 2026-08-30
+! Expires: 1 month
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
 
@@ -336,10 +336,15 @@ histock.tw###fullsiteAD
 ! 巴哈姆特
 home.gamer.com.tw##div.image-status-bar
 
-! 8591 寶物交易（行動版）
-m.8591.com.tw##a.account-bn.flex.align-center
-m.8591.com.tw##div.van-overlay
-m.8591.com.tw##.list-banner
+! 8591 寶物交易
+8591.com.tw##a.account-bn.flex.align-center
+8591.com.tw##div.van-overlay
+8591.com.tw##.list-banner
+8591.com.tw##.steam-banner
+8591.com.tw##.sticky-body
+8591.com.tw##.app-qr-code
+8591.com.tw##.mall-banner-wrapper
+||mcdn.8591.com.tw/v*/_nuxt/duyo_*.png$domain=m.8591.com.tw
 
 ! Mobile01（行動版）
 m.mobile01.com###fancybox-container-1
