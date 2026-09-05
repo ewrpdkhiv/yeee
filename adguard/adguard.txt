@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026-08-30
+! Version: 2026-09-05
 ! Expires: 1 month
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -341,7 +341,6 @@ home.gamer.com.tw##div.image-status-bar
 8591.com.tw##div.van-overlay
 8591.com.tw##.list-banner
 8591.com.tw##.steam-banner
-8591.com.tw##.sticky-body
 8591.com.tw##.app-qr-code
 8591.com.tw##.mall-banner-wrapper
 ||mcdn.8591.com.tw/v*/_nuxt/duyo_*.png$domain=m.8591.com.tw
