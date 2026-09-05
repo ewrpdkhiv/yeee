@@ -343,6 +343,7 @@ home.gamer.com.tw##div.image-status-bar
 8591.com.tw##.steam-banner
 8591.com.tw##.app-qr-code
 8591.com.tw##.mall-banner-wrapper
+8591.com.tw##.right-content
 ||mcdn.8591.com.tw/v*/_nuxt/duyo_*.png$domain=m.8591.com.tw
 
 ! Mobile01（行動版）
