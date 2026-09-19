@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026-09-05
+! Version: 2026-09-19
 ! Expires: 1 month
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -344,7 +344,10 @@ home.gamer.com.tw##div.image-status-bar
 8591.com.tw##.app-qr-code
 8591.com.tw##.mall-banner-wrapper
 8591.com.tw##.right-content
+8591.com.tw##.discount-icon
+8591.com.tw##.right-content
 ||mcdn.8591.com.tw/v*/_nuxt/duyo_*.png$domain=m.8591.com.tw
+
 
 ! Mobile01（行動版）
 m.mobile01.com###fancybox-container-1
