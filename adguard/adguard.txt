@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026-09-19
+! Version: 2026-10-03
 ! Expires: 1 month
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -28,6 +28,15 @@ momoshop.com.tw###dvSmartAgent
 momoshop.com.tw###dvSmartAgentICON
 momoshop.com.tw###bt_A_020_01
 momoshop.com.tw##li.listAreaLi:has(.sponsor-tag)
+
+
+! ==================== 餐飲 / 點餐平台 ====================
+
+! QBurger 桌邊點餐：中間的「下載 APP」優惠提示框（含灰色遮罩）
+selforder.qburger.com.tw###popRequest:has(#popup_Html:contains(超值優惠))
+
+! QBurger 桌邊點餐：下面的登入／註冊橫條
+selforder.qburger.com.tw###Msg_GoLogin
 
 
 ! ==================== 小說 / 閱讀平台 ====================
