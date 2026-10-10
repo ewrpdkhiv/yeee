@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026-10-10
+! Version: 2026.10.10.1
 ! Expires: 1 month
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -113,9 +113,7 @@ pornhub.com##.underPlayerAd
 
 ! ppp.porn
 ! --- 網路層：直接擋掉廣告商網域（含圖片、腳本、iframe，最省流量）---
-||jads.co^
 ||juicyads.com^
-||shukriya90.com^
 ||nettrck.store^
 ||fluxtrck.site^
 ||googletagmanager.com^$domain=ppp.porn
@@ -134,52 +132,76 @@ ppp.porn##.sponsor
 ppp.porn#%#//scriptlet('set-constant', 'adxad', 'undefined')
 ppp.porn###adxad-slider
 
-! mm-cg.com（18H漫畫、18av 等所有子網域）
-mm-cg.com##.ut1_img_ex_content
-mm-cg.com##.ut1_img_content_js
-mm-cg.com##.footer_main
-mm-cg.com##.animenu__nav
-mm-cg.com##.di_img
-mm-cg.com##.div_adhost
-mm-cg.com##.rand_list
-mm-cg.com##img[border="0"][width="1000px"]
-mm-cg.com##span[class="redbig"]
-mm-cg.com##font[size="5"][color="#B00000"]
-mm-cg.com##img[border="0"][width="500"][height="200"]
-mm-cg.com##span[style="font-size:20px;color:#B00000;"]
-mm-cg.com##span[style="font-size:20px;"]
-mm-cg.com##div[id="phCG_OnOff"]
-mm-cg.com##div[class="Bypass_sp"]
-mm-cg.com##.content.video
-mm-cg.com##.footer
-mm-cg.com##a[href*="mmfree"]
-||mm-cg.com/*.gif^
+! 18h.mm-cg.com（僅限 18h 子網域）
+18h.mm-cg.com##.ut1_img_ex_content
+18h.mm-cg.com##.ut1_img_content_js
+18h.mm-cg.com##.footer_main
+18h.mm-cg.com##.animenu__nav
+18h.mm-cg.com##.di_img
+18h.mm-cg.com##.div_adhost
+18h.mm-cg.com##.rand_list
+18h.mm-cg.com##img[border="0"][width="1000px"]
+18h.mm-cg.com##span[class="redbig"]
+18h.mm-cg.com##font[size="5"][color="#B00000"]
+18h.mm-cg.com##img[border="0"][width="500"][height="200"]
+18h.mm-cg.com##span[style="font-size:20px;color:#B00000;"]
+18h.mm-cg.com##span[style="font-size:20px;"]
+18h.mm-cg.com##div[id="phCG_OnOff"]
+18h.mm-cg.com##div[class="Bypass_sp"]
+18h.mm-cg.com##.content.video
+18h.mm-cg.com##.footer
+18h.mm-cg.com##a[href*="mmfree"]
+||18h.mm-cg.com/*.gif^
 ||ammcg.imgstream*.com/toy/
-||mmfree1.com/AD/*^
 
 ! 汙汙漫畫（comicbox / 55comic）
-www.comicbox.xyz##.list_recommend3
-www.comicbox.xyz##.active
-www.comicbox.xyz##.iframe-block-mobileChapterTop
-www.comicbox.xyz##.detail-comment-fix-bottom
-www.comicbox.xyz##.global-navbar
-www.comicbox.xyz##.CarouselView center
-www.comicbox.xyz##.under-top-bar
-www.comicbox.xyz##.inner
-www.comicbox.xyz##.innerBottom
-www.comicbox.xyz##section.mod-recommend3 > h2
-www.comicbox.xyz###img_banner_77_2
-www.comicbox.xyz###btn_toolFav
-www.comicbox.xyz###comment
-www.comicbox.xyz##.wrapper
-www.55comic.com##.wrapper
-##.bannerImg
-##.global-navbar
-##.footer-box
-##.note-top
-##.detail-comment-fix-bottom
-##.friendship
-##.games
+www.comicbox.xyz,www.55comic.com##.list_recommend3
+www.comicbox.xyz,www.55comic.com##.active
+www.comicbox.xyz,www.55comic.com##.iframe-block-mobileChapterTop
+www.comicbox.xyz,www.55comic.com##.detail-comment-fix-bottom
+www.comicbox.xyz,www.55comic.com##.global-navbar
+www.comicbox.xyz,www.55comic.com##.CarouselView center
+www.comicbox.xyz,www.55comic.com##.under-top-bar
+www.comicbox.xyz,www.55comic.com##.inner
+www.comicbox.xyz,www.55comic.com##.innerBottom
+www.comicbox.xyz,www.55comic.com##section.mod-recommend3 > h2
+www.comicbox.xyz,www.55comic.com###img_banner_77_2
+www.comicbox.xyz,www.55comic.com###btn_toolFav
+www.comicbox.xyz,www.55comic.com###comment
+www.comicbox.xyz,www.55comic.com##.wrapper
+www.comicbox.xyz,www.55comic.com##.bannerImg
+www.comicbox.xyz,www.55comic.com##.footer-box
+www.comicbox.xyz,www.55comic.com##.note-top
+www.comicbox.xyz,www.55comic.com##.friendship
+www.comicbox.xyz,www.55comic.com##.games
+
+! comicbox.xyz 自訂規則
+! --- 第三方：h365 遊戲推廣導覽列 ---
+||gs-api.zuczxt.cn/h365-landing-page/$script,domain=comicbox.xyz
+||location.zuczxt.cn^$domain=comicbox.xyz
+
+! --- 站內廣告腳本與事件回報 ---
+||comicbox.xyz/static/js/bmi_banner.js
+||comicbox.xyz/static/js/bmi-ad-image.js
+||comicbox.xyz/static/js/reader-ads.js
+||comicbox.xyz/adEvent
+
+! --- 廣告圖片（只擋 adsbanner，漫畫圖片在 /upload/book/ 不受影響） ---
+||ccavbox.com/break_2/static/upload/adsbanner/
+
+! --- 元素隱藏 ---
+! 所有廣告位（首頁、書籍頁、閱讀頁的橫幅／浮動／彈窗）
+comicbox.xyz##.wuwu-ad-slot
+! 閱讀頁橫幅廣告
+comicbox.xyz##div.cropped_b
+! 首頁文字連結廣告牆
+comicbox.xyz##.pc_gg_div
+! 首頁「成人遊戲區」推廣區塊
+comicbox.xyz##.sp-section:has(a[href*=".sng.link/"])
+
+! --- 永久網址收藏彈窗（煩擾元素，不是廣告） ---
+||comicbox.xyz/static/js/permanent-bookmark-modal.js
+comicbox.xyz###permanentBookmarkModal
 
 ! 18comic（禁漫天堂）
 *.gif|$domain=18comic.vip
@@ -425,14 +447,3 @@ spiritvalers.com##.svslot-sponsor-home
 
 ||ddaa2.com^$third-party
 ||mmfree1.com^$third-party
-
-
-! ==================== 已停用（保留供參考） ====================
-
-! BC&Lowy（已停用，保留供參考）
-! forgetfulbc.blogspot.com##a[target="_blank"]:remove()
-! forgetfulbc.blogspot.com##div[style="text-align: center;"]
-! forgetfulbc.blogspot.com##.embed-container
-! forgetfulbc.blogspot.com##div.separator
-! forgetfulbc.blogspot.com##div.embed-container
-! forgetfulbc.blogspot.com##span[style="color: #660000;"]
