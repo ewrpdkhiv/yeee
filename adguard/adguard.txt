@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026-10-03
+! Version: 2026-10-10
 ! Expires: 1 month
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -81,6 +81,16 @@ xvideos.com##.botLinks
 xvideos.com##div[style="display: flex; background: rgb(222, 38, 0); color: rgb(255, 255, 255); width: 100%; font-size: 17px; padding: 10px 20px; margin: 10px 0px; word-break: break-word; white-space: normal; text-align: center; justify-content: center;"]
 xvideos.com##.live_model_thumb.not-live:upward(3)
 xvideos.com###full-video-link-btn
+xvideos.com##.video-ad
+xvideos.com###video-ad
+xvideos.com###ad-footer
+xvideos.com##.ad-support
+xvideos.com##.thumb-ad
+xvideos.com##.mobile-ad
+xvideos.com##.premium-results-line
+xvideos.com###video-sponsor-links
+xvideos.com##iframe[src*="ads"]
+xvideos.com##div[class*="exo"]
 
 ! Pornhub（中文版）
 cn.pornhub.com##.js_videoSubscribeButton
@@ -94,25 +104,56 @@ cn.pornhub.com##i.ph-icon-flag
 cn.pornhub.com##h3.heading1
 cn.pornhub.com##div.rtaDisclaimerWrapper
 
-! 18H漫畫
-18h.mm-cg.com##.ut1_img_ex_content
-18h.mm-cg.com##.footer_main
-18h.mm-cg.com##.ut1_img_content_js
-18h.mm-cg.com##.animenu__nav
-18h.mm-cg.com##.di_img
-18h.mm-cg.com##.div_adhost
-18h.mm-cg.com##.rand_list
-18h.mm-cg.com##img[border="0"][width="1000px"]
-18h.mm-cg.com##span[class="redbig"]
-18h.mm-cg.com##font[size="5"][color="#B00000"]
-18h.mm-cg.com##img[border="0"][width="500"][height="200"]
-18h.mm-cg.com##span[style="font-size:20px;color:#B00000;"]
-18h.mm-cg.com##span[style="font-size:20px;"]
-18h.mm-cg.com##div[id="phCG_OnOff"]
-18h.mm-cg.com##div[class="Bypass_sp"]
-18h.mm-cg.com##.content.video
-18h.mm-cg.com##.footer
-||18h.mm-cg.com/*.gif^
+! Pornhub（廣告，涵蓋所有子網域）
+pornhub.com##.adsbytrafficjunky
+pornhub.com##.adContainer
+pornhub.com##div[class*="adWrapper"]
+pornhub.com##iframe[src*="trafficjunky"]
+pornhub.com##.underPlayerAd
+
+! ppp.porn
+! --- 網路層：直接擋掉廣告商網域（含圖片、腳本、iframe，最省流量）---
+||jads.co^
+||juicyads.com^
+||shukriya90.com^
+||nettrck.store^
+||fluxtrck.site^
+||googletagmanager.com^$domain=ppp.porn
+! 播放器前置廣告：用 AdGuard 內建的假 IMA 腳本替代，避免播放器壞掉
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=ppp.porn
+! 站內自己放的廣告卡片圖片（/a/i/數字/ 開頭）
+/^https:\/\/ppp\.porn\/a\/i\/\d+\//$image,domain=ppp.porn
+! --- 元素隱藏：把廣告留下的空位一起收掉 ---
+! 中間漸層橫條
+ppp.porn##section > div:has(> a[href*="trck."])
+! 推薦影片中的假影片卡片
+ppp.porn##.card-video:has(a[href*="trck."])
+! 贊助區塊（JuicyAds 橫幅、adxad iframe）
+ppp.porn##.sponsor
+! 右下角浮動廣告
+ppp.porn#%#//scriptlet('set-constant', 'adxad', 'undefined')
+ppp.porn###adxad-slider
+
+! mm-cg.com（18H漫畫、18av 等所有子網域）
+mm-cg.com##.ut1_img_ex_content
+mm-cg.com##.ut1_img_content_js
+mm-cg.com##.footer_main
+mm-cg.com##.animenu__nav
+mm-cg.com##.di_img
+mm-cg.com##.div_adhost
+mm-cg.com##.rand_list
+mm-cg.com##img[border="0"][width="1000px"]
+mm-cg.com##span[class="redbig"]
+mm-cg.com##font[size="5"][color="#B00000"]
+mm-cg.com##img[border="0"][width="500"][height="200"]
+mm-cg.com##span[style="font-size:20px;color:#B00000;"]
+mm-cg.com##span[style="font-size:20px;"]
+mm-cg.com##div[id="phCG_OnOff"]
+mm-cg.com##div[class="Bypass_sp"]
+mm-cg.com##.content.video
+mm-cg.com##.footer
+mm-cg.com##a[href*="mmfree"]
+||mm-cg.com/*.gif^
 ||ammcg.imgstream*.com/toy/
 ||mmfree1.com/AD/*^
 
@@ -154,9 +195,6 @@ hanime1.me###mobile-ad
 hanime1.me###watch-footer
 hanime1.me###user-modal-trigger
 
-! 18av
-18av.mm-cg.com##.ut1_img_ex_content
-
 
 ! ==================== 新聞 / 媒體平台 ====================
 
@@ -168,7 +206,6 @@ tw.news.yahoo.com##div.gam-placeholder.sdaLite_D(n)
 tw.news.yahoo.com###postArticle
 
 ! 鏈新聞（abmedia）
-abmedia.io##span
 abmedia.io##.wp-block-groupinner-container
 abmedia.io###pum-47873
 
@@ -354,9 +391,7 @@ home.gamer.com.tw##div.image-status-bar
 8591.com.tw##.mall-banner-wrapper
 8591.com.tw##.right-content
 8591.com.tw##.discount-icon
-8591.com.tw##.right-content
 ||mcdn.8591.com.tw/v*/_nuxt/duyo_*.png$domain=m.8591.com.tw
-
 
 ! Mobile01（行動版）
 m.mobile01.com###fancybox-container-1
@@ -384,6 +419,12 @@ aion2.bnshive.com##[data-sidebar="group"][class*="pt-0"]
 
 ! spiritvalers
 spiritvalers.com##.svslot-sponsor-home
+
+
+! ==================== 廣告網域封鎖（清單未收錄的網域） ====================
+
+||ddaa2.com^$third-party
+||mmfree1.com^$third-party
 
 
 ! ==================== 已停用（保留供參考） ====================
