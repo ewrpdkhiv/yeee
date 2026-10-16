@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026.10.10.1
+! Version: 2026.10.16.1
 ! Expires: 1 month
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -154,7 +154,8 @@ ppp.porn###adxad-slider
 ||18h.mm-cg.com/*.gif^
 ||ammcg.imgstream*.com/toy/
 
-! 汙汙漫畫（comicbox / 55comic）
+! ---------- 汙汙漫畫（comicbox / 55comic 共用） ----------
+! --- 元素隱藏（兩站共用） ---
 www.comicbox.xyz,www.55comic.com##.list_recommend3
 www.comicbox.xyz,www.55comic.com##.active
 www.comicbox.xyz,www.55comic.com##.iframe-block-mobileChapterTop
@@ -174,34 +175,52 @@ www.comicbox.xyz,www.55comic.com##.footer-box
 www.comicbox.xyz,www.55comic.com##.note-top
 www.comicbox.xyz,www.55comic.com##.friendship
 www.comicbox.xyz,www.55comic.com##.games
+! 所有廣告位（橫幅／浮動／彈窗，含彈窗、閱讀頁浮動廣告）
+comicbox.xyz,www.55comic.com##.wuwu-ad-slot
+! 首頁文字連結廣告牆
+comicbox.xyz,www.55comic.com##.pc_gg_div
+! 首頁與章節頂部的廣告 iframe 區塊
+www.55comic.com##[class^="iframe-block-"]
+! 閱讀頁頂部推廣區外框
+www.55comic.com##.sp-reader-promo
+! 首頁「成人遊戲區」（外部廣告卡片）
+www.55comic.com##.sp-section:has(a.sp-card[href^="http"]:not([href*="55comic.com"]))
+comicbox.xyz##.sp-section:has(a[href*=".sng.link/"])
+! 閱讀頁橫幅廣告
+comicbox.xyz##div.cropped_b
 
-! comicbox.xyz 自訂規則
-! --- 第三方：h365 遊戲推廣導覽列 ---
+! --- CSS 注入 ---
+! 廣告彈窗鎖住捲動，解除
+www.55comic.com#$#body.wuwu-ad-modal-open { overflow: auto !important; }
+
+! --- 網路層：第三方 ---
+! H365 遊戲推廣導覽列、Matomo 追蹤、定位查詢
 ||gs-api.zuczxt.cn/h365-landing-page/$script,domain=comicbox.xyz
 ||location.zuczxt.cn^$domain=comicbox.xyz
+||zuczxt.cn^$domain=55comic.com
+! 廣告聯播網 iframe
+||greentrafsa.com^
 
-! --- 站內廣告腳本與事件回報 ---
+! --- 網路層：站內廣告腳本與事件回報 ---
 ||comicbox.xyz/static/js/bmi_banner.js
 ||comicbox.xyz/static/js/bmi-ad-image.js
 ||comicbox.xyz/static/js/reader-ads.js
 ||comicbox.xyz/adEvent
+||55comic.com/static/js/ad-manager.js
+||55comic.com/static/js/bmi_banner.js
+||55comic.com/static/js/reader-ads.js
 
 ! --- 廣告圖片（只擋 adsbanner，漫畫圖片在 /upload/book/ 不受影響） ---
 ||ccavbox.com/break_2/static/upload/adsbanner/
 
-! --- 元素隱藏 ---
-! 所有廣告位（首頁、書籍頁、閱讀頁的橫幅／浮動／彈窗）
-comicbox.xyz##.wuwu-ad-slot
-! 閱讀頁橫幅廣告
-comicbox.xyz##div.cropped_b
-! 首頁文字連結廣告牆
-comicbox.xyz##.pc_gg_div
-! 首頁「成人遊戲區」推廣區塊
-comicbox.xyz##.sp-section:has(a[href*=".sng.link/"])
-
 ! --- 永久網址收藏彈窗（煩擾元素，不是廣告） ---
 ||comicbox.xyz/static/js/permanent-bookmark-modal.js
 comicbox.xyz###permanentBookmarkModal
+
+! xbookcn.com（blog.xbookcn.com）
+! Cloudflare Web Analytics 統計信標
+||cloudflareinsights.com^$domain=xbookcn.com
+||xbookcn.com/cdn-cgi/rum
 
 ! 18comic（禁漫天堂）
 *.gif|$domain=18comic.vip
@@ -440,7 +459,7 @@ aion2.bnshive.com##.absolute.-top-9.right-0
 aion2.bnshive.com##[data-sidebar="group"][class*="pt-0"]
 
 ! spiritvalers
-spiritvalers.com##.svslot-sponsor-home
+spiritvalers.com##svslot-sponsor-home
 
 
 ! ==================== 廣告網域封鎖（清單未收錄的網域） ====================
