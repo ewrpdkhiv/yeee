@@ -1,6 +1,6 @@
 ! Title: Private Filter
-! Version: 2026.10.16.1
-! Expires: 1 month
+! Version: 2026.10.17.1
+! Expires: 30 days
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
 
@@ -62,13 +62,47 @@ bg3.co##.social_share_frame
 ! 思兔閱讀
 sto520.com##.div_ads_label
 
-! 台灣小說網
+! 台灣小說網（手機版 m.xsw.tw）
 m.xsw.tw##.back
+! --- 網路請求：預埋的廣告來源 ---
+||ntpddq.com^$third-party
+||18tzx.com^$third-party
+! --- 預防性空函式 ---
+xsw.tw#%#window.hf1 = window.hf2 = window.hf3 = function(){};
+! --- 選用：閱讀頁底部推薦書單 ---
+||m.xsw.tw/tj.js
+
+! 台灣小說網（twkan.com）
+! --- 網路請求：廣告載入器＋空函式避免報錯 ---
+||twkan.com/js/otherad-exo.js
+twkan.com#%#window.loadAdv = function(){};
+! --- 網路請求：手機版全螢幕／滑動廣告 ---
+||vm5apis.com^$third-party
+! --- 網路請求：分享按鈕（兼具追蹤）---
+||sharethis.com^$third-party,domain=twkan.com
+||facebook.com/plugins/$subdocument,domain=twkan.com
+||line-website.com^$third-party,domain=twkan.com
+! --- 元素隱藏 ---
+twkan.com##div.txtcenter:has(> ins.pubadx-slot)
+twkan.com##ins.pubadx-slot
+twkan.com##[id^="bg-ssp-"]
+twkan.com##vmfive-ad-unit
+twkan.com##.adbanner
+twkan.com##.sharethis-inline-share-buttons
+twkan.com##.sharebtn
+
+! UU看書（uukanshu.cc）
+! --- 網路請求：閱讀頁的彈出式廣告 ---
+||political-effort.com^$third-party
+! --- 網路請求：Facebook 外掛 ---
+||facebook.com/plugins/$subdocument,domain=uukanshu.cc
+! --- 元素隱藏 ---
+uukanshu.cc##ins.pubadx-slot
+uukanshu.cc##iframe[src*="facebook.com/plugins"]
 
 ! 起點中文網
 qidian.com##.review
 qidian.com###r-authorSay
-qidian.com##._wrapper_131ir_193
 qidian.com##.chapter-end-qrcode
 
 
@@ -78,7 +112,6 @@ qidian.com##.chapter-end-qrcode
 xvideos.com##.icf-pencil
 xvideos.com##.thread-node-metadata
 xvideos.com##.botLinks
-xvideos.com##div[style="display: flex; background: rgb(222, 38, 0); color: rgb(255, 255, 255); width: 100%; font-size: 17px; padding: 10px 20px; margin: 10px 0px; word-break: break-word; white-space: normal; text-align: center; justify-content: center;"]
 xvideos.com##.live_model_thumb.not-live:upward(3)
 xvideos.com###full-video-link-btn
 xvideos.com##.video-ad
@@ -222,8 +255,34 @@ comicbox.xyz###permanentBookmarkModal
 ||cloudflareinsights.com^$domain=xbookcn.com
 ||xbookcn.com/cdn-cgi/rum
 
-! 18comic（禁漫天堂）
+! 18comic.vip（禁漫天堂）
+! --- 網路請求：所有 gif ---
 *.gif|$domain=18comic.vip
+! --- 網路請求：廣告／彈出式廣告／追蹤 ---
+||campfirecroutondecorator.com^$third-party
+||chnsrv.com^$third-party
+||18comic.vip/templates/frontend/airav/js/td_js/td_ga_tracker.js
+! --- 網路請求：遊戲推廣橫幅圖 ---
+||cdn-msp.18comic.vip/static/resources/files/GAME_ID/$image
+||cdn-msp.18comic.vip/static/resources/images/Games/$image
+||cdn-msp.18comic.vip/static/resources/images/games/$image
+! --- 元素隱藏：偽裝成漫畫格子的廣告 ---
+18comic.vip##div[class*="col-"]:has(> div > ins[data-zoneid])
+18comic.vip##div:has(> ins[data-zoneid])
+! --- 元素隱藏：外部推廣連結 ---
+18comic.vip##.ad-wrapper
+18comic.vip##li:has(> a.outsidenotice)
+18comic.vip##li:has(> a[href="#headelikes_modal"])
+! --- 元素隱藏：廣告彈窗＋解除遮罩與捲動鎖定 ---
+18comic.vip###guide-modal
+18comic.vip###headelikes_modal
+18comic.vip###bouns-popup
+18comic.vip##.modal-backdrop
+18comic.vip#$#body.modal-open { overflow: auto !important; padding-right: 0 !important; }
+! --- 選用：站內導流入口（AI風月、小電影、遊戲）---
+18comic.vip##li:has(> a[href="/games"])
+18comic.vip##li:has(> a[href="/ai_chat"])
+18comic.vip##a[href="/videos_cosav"]
 
 ! 愛薇兒
 avcome.com###iframepage
@@ -243,16 +302,10 @@ hanime1.me###user-modal-trigger
 tw.news.yahoo.com##.article-challenge-container
 tw.news.yahoo.com###popover-wrapper
 tw.news.yahoo.com##button.follow-button.non-loggedin
-tw.news.yahoo.com##div.gam-placeholder.sdaLite_D(n)
 tw.news.yahoo.com###postArticle
 
 ! 鏈新聞（abmedia）
-abmedia.io##.wp-block-groupinner-container
 abmedia.io###pum-47873
-
-! 爆料公社
-web.bc3ts.net##div.card.PostCommentCard_commentAddWrapperIKgXd
-web.bc3ts.net##div.OpenApp_rootGNltP.OpenApp_rootWithFooterComment6i0hB
 
 ! 經濟日報
 money.udn.com##div.aside-actvity
@@ -352,7 +405,6 @@ codelove.tw##.container.mt-5
 codelove.tw##.nice-container
 codelove.tw##.alert.alert-secondary.my-0
 codelove.tw###edmModal
-codelove.tw##div[class="_bg-white rounded _border p-3 shopify-service-card"]
 
 ! 六角學院
 www.hexschool.com###footerContact
@@ -412,7 +464,6 @@ m.youtube.com##ytm-search ytm-video-with-context-renderer [data-style="SHORTS"]
 
 ! 全域規則
 ##.SearchBar-input:upward(8)
-##.ContentItem-actions
 
 ! 哈米點（中華電信）
 hamipoint.cht.com.tw##.advbox
@@ -454,7 +505,6 @@ zh.moegirl.org.cn###moe-open-in-app
 treemi9.blogspot.com###HTML1
 
 ! Aion2 攻略站（bnshive）
-aion2.bnshive.com##div[data-v-0956323b]
 aion2.bnshive.com##.absolute.-top-9.right-0
 aion2.bnshive.com##[data-sidebar="group"][class*="pt-0"]
 
@@ -463,6 +513,10 @@ spiritvalers.com##svslot-sponsor-home
 
 
 ! ==================== 廣告網域封鎖（清單未收錄的網域） ====================
+
+! 共用：多個網站都會用到的廣告聯播網
+! pubadx：twkan.com、uukanshu.cc 都有用到
+||pubadx.one^$third-party
 
 ||ddaa2.com^$third-party
 ||mmfree1.com^$third-party
