@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026.10.17.1
+! Version: 2026.10.20.1
 ! Expires: 30 days
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -347,6 +347,56 @@ setn.com##div.wrapper > div.video-container
 
 ! 自由時報（優分析／ltn 子網域）
 uto.ltn.com.tw###right
+
+! 中時新聞網（chinatimes.com）
+! --- 追蹤器／第三方腳本 ---
+! PAC Platform newsscope（Prism intelligence AI 推薦框）
+||pacplatform.net^$third-party
+! VigLink 聯盟行銷連結改寫
+||viglink.com^$third-party
+! Protico 社群互動小工具
+||protico.io^$third-party
+! Numbers Protocol 圖片來源認證小工具
+||numbersprotocol.io^$third-party
+||cdn.jsdelivr.net/npm/@numbersprotocol/$domain=chinatimes.com
+! --- 版面雜訊 ---
+! 頁首推廣連結（太陽星官方購物、九合一大選、旺得富）
+chinatimes.com##.promote-banner
+! 文章內插入的推廣標題
+chinatimes.com##.promote-word
+! Prism intelligence AI 推薦框
+chinatimes.com###prism-widget-container
+! 「新聞管家／詢問AI」浮動按鈕
+chinatimes.com##.ask-ai
+||askmysite.chinatimes.com^
+! 訂閱電子報彈窗、閒置提示彈窗
+chinatimes.com##.subscribe-news-letter-prompt
+chinatimes.com##.page-idle-prompt
+! 「$力挺」付費贊助（文章底部大框＋作者旁小按鈕）
+chinatimes.com###donate-form-container
+chinatimes.com##.donation
+! --- 選用：留言區 ---
+chinatimes.com##section.comments
+||disqus.com^$domain=chinatimes.com
+||disquscdn.com^$domain=chinatimes.com
+
+! 優分析（uanalyze.com.tw）
+! --- 第三方腳本 ---
+! MailerLite 電子報訂閱彈窗
+||assets.mailerlite.com/js/universal.js$domain=uanalyze.com.tw
+! --- 版面雜訊 ---
+! 所有課程廣告圖（文章中間、文章下方、右側欄）
+||storage.uanalyze.com.tw/advertisement/
+uanalyze.com.tw##.react-component:has(img[src*="/advertisement/"])
+! 左下角浮動按讚按鈕
+uanalyze.com.tw##div.like
+! 「這篇文章對您來說實用嗎？」回饋列
+uanalyze.com.tw##.ua-article > .react-component.mb-14
+! 頁首 LINE 社群、YouTube 按鈕
+uanalyze.com.tw##header.ua-header a[href*="line.me"]
+uanalyze.com.tw##header.ua-header a[href*="youtube.com"]
+! --- 選用：側欄社群連結列 ---
+uanalyze.com.tw##section.outLink
 
 
 ! ==================== 社群平台 ====================
