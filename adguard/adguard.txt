@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026.10.20.1
+! Version: 2026.10.24.1
 ! Expires: 30 days
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -291,9 +291,37 @@ avcome.com##td[valign="top"][colspan="5"]
 avcome.com##img[border="0"][height="230"][width="800"]
 
 ! hanime1
+! --- 網路層：廣告聯播網 ---
+||jads.co^$third-party
+||impactserving.com^$third-party
+||bluetrafficstream.com^$third-party
+! juicyads.com 已在 ppp.porn 區塊以全域規則封鎖，這裡不用重複
+! --- 網路層：首頁「播放／更多資訊」按鈕觸發的 Stripchat 彈出式廣告 ---
+||mayzaent.com^$document
+! --- 網路層：分享按鈕追蹤（會讓「分享」視窗的社群按鈕消失，需要分享功能就刪掉這條）---
+||platform-api.sharethis.com^$third-party
+! --- 元素隱藏：原有規則 ---
 hanime1.me###mobile-ad
 hanime1.me###watch-footer
 hanime1.me###user-modal-trigger
+! --- 元素隱藏：首頁廣告版位 ---
+hanime1.me##.home-banner-juicyads-md
+hanime1.me##.juicyads-home-bottom-banner
+! --- 元素隱藏：JuicyAds 廣告元素與外層空白區塊 ---
+hanime1.me##ins[id]
+hanime1.me##div:has(> ins[id])
+! --- 元素隱藏：側欄廣告 ---
+hanime1.me##.sidebar-ad-grid
+hanime1.me##.sidebar-ad-square
+hanime1.me##.ad-scaler-square
+hanime1.me##iframe[src*="bluetrafficstream"]
+! --- 元素隱藏：相關影片列表中偽裝成影片的廣告卡片 ---
+hanime1.me##.sponsor-bg.ad-container-observer
+hanime1.me##.sponsor-bg-vertical
+hanime1.me##.related-video-width:has(.sponsor-bg-vertical)
+hanime1.me##.related-watch-wrap:has(> [data-href*="tip-top.one"])
+! --- 元素隱藏：導覽列外部遊戲推廣連結 ---
+hanime1.me##.nav-desktop-uncen-game-item
 
 
 ! ==================== 新聞 / 媒體平台 ====================
