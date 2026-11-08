@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026.11.08.1
+! Version: 2026.11.08.2
 ! Expires: 30 days
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -352,13 +352,34 @@ tw.news.yahoo.com###footer
 ! 鏈新聞（abmedia）
 abmedia.io###pum-47873
 
-! 經濟日報
+! 經濟日報（money.udn.com）
+! --- 原有規則 ---
 money.udn.com##div.aside-actvity
 money.udn.com##div.notice-mask
 money.udn.com###threemin
 money.udn.com##div.noticeBox
 money.udn.com##div.breaking-news
 money.udn.com##div.appbanner
+! --- 側欄與內文廣告格 ---
+money.udn.com##.article-aside__ad-list
+money.udn.com##[class*="edn-ads"]
+money.udn.com##[id^="div-gpt-ad"]
+! --- 頂部跑馬燈即時新聞 ---
+money.udn.com##.header-breaking-news
+! --- 「深色模式上線」提示 ---
+money.udn.com##.btn-wrapper:has-text(深色模式上線)
+! --- 文末推薦區與上一篇／下一篇 ---
+money.udn.com##.story-flex-bt-wrapper
+money.udn.com##.article-switch
+! --- 留言區 ---
+money.udn.com##.article-comments
+! --- 分享列 ---
+money.udn.com##.social-bar
+! --- 浮動按鈕與「前往頁面」提示 ---
+money.udn.com##.aside-btn-wrapper
+money.udn.com###story_alert
+! --- 側欄「編輯精選」 ---
+money.udn.com##.article-aside__editor-selection
 
 ! udn 新聞
 udn.com##.social-wrapper
@@ -468,6 +489,60 @@ uanalyze.com.tw##header.ua-header a[href*="line.me"]
 uanalyze.com.tw##header.ua-header a[href*="youtube.com"]
 ! --- 選用：側欄社群連結列 ---
 uanalyze.com.tw##section.outLink
+
+
+! ==================== 財經 / 股市平台 ====================
+
+! Yahoo 股市（tw.stock.yahoo.com）
+! 廣告格擋掉後殘留的空白容器
+tw.stock.yahoo.com##div[id^="sda-"]
+! 「加入為 Google 偏好來源」「加入首選來源」按鈕
+tw.stock.yahoo.com##a:has-text(/Google 偏好來源|加入首選來源/)
+! 「升級VIP」推銷連結
+tw.stock.yahoo.com##a:has-text(升級VIP)
+! 相關推薦（含 Y民調）
+tw.stock.yahoo.com###module-coview
+! 文章下方推薦資訊流
+tw.stock.yahoo.com###module-preference-stream
+! 內文推薦內容卡片
+tw.stock.yahoo.com##div[id^="recommendation-contents-"]
+! 延伸閱讀
+tw.stock.yahoo.com##p.read-more-vendor
+! 手機版底部「Yahoo股市 App」下載橫幅
+tw.stock.yahoo.com##div:has(> a[href*="app"]):has-text(Yahoo股市 App)
+tw.stock.yahoo.com##div[class*="fixed"]:has-text(我的投資工具帶著走)
+! 手機版頂部標題列取消固定
+tw.stock.yahoo.com#$##header, #header > div:not(#desktop-header), #header > div:not(#desktop-header) > div { position: static !important; }
+tw.stock.yahoo.com#$#body, main { padding-top: 0 !important; }
+! 「打開App」按鈕
+tw.stock.yahoo.com##a:has-text(/^打開App$/)
+
+! 股感（stockfeel.com.tw）
+! 文章上方空白橫幅
+stockfeel.com.tw##.sin-banner
+! 文中與文末推廣輪播
+stockfeel.com.tw##.swiper.article-H2
+stockfeel.com.tw##.swiper.article-bottom
+! 側欄「追蹤股感」與推廣輪播
+stockfeel.com.tw##.sin_follow_web
+stockfeel.com.tw##.swiper.article-sidebar
+! 「週餘 1 篇」閱讀額度提示
+stockfeel.com.tw##.single-post-limit
+! 會員追蹤通知提示
+stockfeel.com.tw##.member-follow-notify
+! 浮動分享列（電腦版與手機版）
+stockfeel.com.tw##.single-float-share-web
+stockfeel.com.tw##.single-float-share-mobile-wrapper
+! 右下角「任務中心」浮動視窗
+stockfeel.com.tw###recommended-mission-modal
+
+! 財經M平方（macromicro.me）
+! 頂部促銷橫條
+macromicro.me##.mm-eyebrow-alert
+! 「免費成為 MM 會員」推銷提示
+macromicro.me##.chart-wrapper div:has-text(/^免費成為 MM/)
+! 頁尾網站地圖
+macromicro.me##.footer-v2__menu
 
 
 ! ==================== 社群平台 ====================
