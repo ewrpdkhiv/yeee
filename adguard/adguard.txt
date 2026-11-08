@@ -1,5 +1,5 @@
 ! Title: Private Filter
-! Version: 2026.10.24.1
+! Version: 2026.11.08.1
 ! Expires: 30 days
 ! Homepage: https://raw.githubusercontent.com/ewrpdkhiv/yeee/refs/heads/master/adguard/adguard.txt
 
@@ -331,6 +331,23 @@ tw.news.yahoo.com##.article-challenge-container
 tw.news.yahoo.com###popover-wrapper
 tw.news.yahoo.com##button.follow-button.non-loggedin
 tw.news.yahoo.com###postArticle
+! --- 清掉多餘區塊 ---
+! 廣告被擋掉後留下的空白佔位框（廣告本身內建規則已擋）
+tw.news.yahoo.com##div[id^="sda-"]
+! 文章裡的分享按鈕
+tw.news.yahoo.com##div[id^="share-button-group"]
+! 文章裡的推薦內容
+tw.news.yahoo.com##div[id^="recommendation-contents"]
+! 留言區
+tw.news.yahoo.com##div[id$="-canvass"]
+! 文章下方的推薦文章（很長的資訊流）
+tw.news.yahoo.com###recommended-article-stream
+! 熱門／發燒區塊
+tw.news.yahoo.com###trending
+! 個人化推薦資訊流
+tw.news.yahoo.com###module-preference-stream
+! 頁尾
+tw.news.yahoo.com###footer
 
 ! 鏈新聞（abmedia）
 abmedia.io###pum-47873
@@ -359,9 +376,35 @@ wealth.businessweekly.com.tw###_popIn_recommend
 managertoday.com.tw##img.w-12.sm
 businesstoday.com.tw###showNext
 
-! 風傳媒
+! 風傳媒（storm.mg）— 移除多餘資訊（桌機＋手機）
 storm.mg##.lineCommunity
 storm.mg###stock_bar_inner
+! 頂部股市跑馬燈
+storm.mg##div.menu > div.bg-smg-gray-100
+! 快訊橫條
+storm.mg##div.menu > div.h-16:has(.bg-smg-red-primary)
+! 左上合作網站 Logo（新新聞、ONE%）
+storm.mg##div.menu a[href*="new7.storm.mg"]
+storm.mg##div.menu a[href*="onepercent.storm.mg"]
+! 訂閱 VIP／訂閱按鈕
+storm.mg##a.bg-smg-gradient-02-button
+storm.mg##a.bg-smg-gradient-07-skeuomorph
+! 文章左側分享列（桌機）
+storm.mg##div.sticky[class*="top-[60px]"]
+! 電子報訂閱連結
+storm.mg##a.wsj_newsletter
+! 右側欄（桌機：現正熱映中、熱門文章）
+storm.mg##aside.articleSide
+! 文章下方：相關報導、作者簡介、今日精選、更多文章
+storm.mg###articleRelatedEl
+storm.mg##.authorInfoBrief
+storm.mg##div.my-3.grid.grid-cols-1.gap-6:has(.divide-y)
+storm.mg##.ArticleMore
+! --- 手機版才有 ---
+! 文章下方「現正熱映中」影片
+storm.mg##div:has(> div.my-3.block.bg-smg-gray-100)
+! 「最新贊助」名單
+storm.mg##div.my-3[class*="smg-desktop:hidden"]:has(.divide-y)
 
 ! ETtoday 財經
 finance.ettoday.net###adsense_matched_content_2
